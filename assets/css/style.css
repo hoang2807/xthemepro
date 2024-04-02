@@ -1,0 +1,437 @@
+@charset "UTF-8";
+header {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-container {
+  max-width: 1361px;
+  width: 100%;
+  height: 92px;
+  margin: 0 auto;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-transform: uppercase;
+  align-items: flex-start;
+}
+.list-header .list-header-itemLeft {
+  font-size: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.list-header .burger {
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+}
+.list-header svg {
+  width: 100%;
+  height: 100%;
+}
+.list-header #nav-burger-circle {
+  fill: none;
+  stroke: #fff;
+}
+.list-header .nav-burger-line {
+  fill: #fff;
+}
+
+.wrapper-intro {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home-wrapper {
+  width: 80%;
+  padding-top: 19%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+.home-wrapper .home-wrapperLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.home-wrapper .home-wrapperLeft .text-1 {
+  font-size: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-wrapper .home-wrapperLeft .text-2 {
+  color: #001c43 !important;
+  text-shadow: 0 0 2px white;
+  text-align: center;
+  font-size: 90px;
+  text-transform: uppercase;
+}
+.home-wrapper .home-wrapperLeft .text-3 {
+  font-size: 24px;
+  text-align: end;
+}
+.home-wrapper .home-wrapperRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 120px;
+}
+.home-wrapper .home-wrapperRight .btn-home {
+  margin-top: 22px;
+  width: 228px;
+  height: 48px;
+  text-transform: uppercase;
+  border-radius: 3px 30px 3px 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.home-wrapper .home-wrapperRight .btn-home:hover {
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+  border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
+}
+.home-wrapper .line {
+  width: 122px;
+  height: 0px;
+  transform: rotate(90deg);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #050b25;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .overlay-container {
+  width: 80%;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.overlay .overlay-container li {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 48px;
+}
+.overlay .overlay-container li span {
+  padding-left: 40px;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  line-height: normal;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #050b25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 2s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: #050b25;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: #050b25;
+}
+
+.about {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+}
+.about .about-left {
+  width: 50%;
+  background-image: url("../images/split_left.png");
+}
+.about .about-left .container-about-left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  width: 60%;
+  margin-inline: auto;
+  gap: 22px;
+}
+.about .about-left .container-about-left .about-design {
+  padding-top: 4px;
+}
+.about .about-left .container-about-left .about-text-left {
+  position: relative;
+}
+.about .about-left .container-about-left .design {
+  position: absolute;
+  top: 20px;
+  left: 130px;
+}
+.about .about-left .container-about-left .text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  padding-top: 22px;
+}
+.about .about-left .container-about-left .about-design {
+  display: flex;
+  gap: 18px;
+}
+.about .about-left .container-about-left .about-design .about-design-text {
+  width: 50%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.about .about-right {
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/split_right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.about .about-right .circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.about .about-right .like {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.web-design {
+  background-color: #050b25;
+  position: relative;
+}
+.web-design .container-image {
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.web-design .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.web-design .plan {
+  position: absolute;
+  bottom: 8%;
+  left: 281px;
+}
+.web-design .book {
+  position: absolute;
+  left: 551px;
+  bottom: 140px;
+}
+
+/*# sourceMappingURL=style.css.map */

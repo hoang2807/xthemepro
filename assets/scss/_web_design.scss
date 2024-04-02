@@ -1,0 +1,30 @@
+.web-design {
+  background-color: $bg-dark;
+  position: relative;
+
+  .container-image {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .plan {
+    position: absolute;
+    bottom: 8%;
+    left: 281px;
+  }
+
+  .book {
+    position: absolute;
+    left: 551px;
+    bottom: 140px;
+  }
+}
