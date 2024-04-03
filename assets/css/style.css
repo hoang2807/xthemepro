@@ -147,6 +147,11 @@ header {
   letter-spacing: 5px;
 }
 
+@media only screen and (max-width: 480.98px) {
+  .home-wrapper {
+    flex-direction: column;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -419,20 +424,85 @@ section {
   left: 0;
   bottom: 0;
 }
-.web-design .line {
+.web-design .container-image .line {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.web-design .plan {
+.web-design .container-image .plan {
   position: absolute;
   bottom: 8%;
   left: 281px;
 }
-.web-design .book {
+.web-design .container-image .book {
   position: absolute;
   left: 551px;
   bottom: 140px;
+}
+.web-design .container-text {
+  position: relative;
+  top: 30%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 55%;
+  gap: 23px;
+}
+.web-design .container-text .text-image .design {
+  position: absolute;
+  top: 20px;
+  left: 245px;
+}
+.web-design .container-text .text-image .web {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.web-design .container-text .text {
+  text-align: end;
+  margin-top: 150px;
+  margin-right: 200px;
+  font-size: 24px;
+  padding-right: 12px;
+}
+.web-design .container-text .text span {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+}
+.web-design .container-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  width: 494px;
+  text-align: right;
+}
+
+.app-design {
+  display: flex;
+  position: relative;
+}
+.app-design .app-design-left {
+  width: 50%;
+  background-image: url("../images/split_left.png");
+}
+.app-design .app-design-right {
+  width: 50%;
+  background-image: url("../images/app-design/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.app-design .app-design-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/app-design/fill-bg.png");
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

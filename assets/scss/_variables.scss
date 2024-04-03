@@ -13,3 +13,102 @@ $fw-bl: 900;
 $white: #fff;
 $text-dark: #001c43;
 $bg-dark: #050b25;
+
+// START FUNCTION
+@mixin flex($j, $a, $g) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  gap: $g;
+}
+
+// START BREAKPOINT VARIABLES
+@mixin min-extra-desktop {
+  @media (min-width: 1440.99px) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin min-landscape {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin extra-desktop {
+  @media (max-width: 1440.98px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media only screen and (max-width: 1023.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin extra-mobile {
+  @media only screen and (max-width: 576.98px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480.98px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media only screen and (max-width: 391.98px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES
+
+// WIDTH CONTAINER VARIABLES
+// body {
+//   --width-container: 1160px;
+//   @include desktop {
+//     --width-container: 936px;
+//   }
+//   @include tablet {
+//     --width-container: 699px;
+//   }
+//   @include landscape-phone {
+//     --width-container: 519px;
+//   }
+//   @include extra-mobile {
+//     --width-container: 100%;
+//   }
+// }

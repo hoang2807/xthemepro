@@ -8,23 +8,69 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .plan {
+      position: absolute;
+      bottom: 8%;
+      left: 281px;
+    }
+
+    .book {
+      position: absolute;
+      left: 551px;
+      bottom: 140px;
+    }
   }
 
-  .line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+  .container-text {
+    position: relative;
+    top: 30%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 55%;
+    gap: 23px;
+    .text-image {
+      // position: relative;
+      .design {
+        position: absolute;
+        top: 20px;
+        left: 245px;
+      }
 
-  .plan {
-    position: absolute;
-    bottom: 8%;
-    left: 281px;
-  }
+      .web {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
 
-  .book {
-    position: absolute;
-    left: 551px;
-    bottom: 140px;
+    .text {
+      text-align: end;
+      margin-top: 150px;
+      margin-right: 200px;
+      font-size: 24px;
+      padding-right: 12px;
+      span {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 60px;
+      }
+    }
+
+    p {
+      font-family: $font-poppins;
+      font-size: 14px;
+      font-weight: 400;
+      width: 494px;
+      text-align: right;
+    }
   }
 }

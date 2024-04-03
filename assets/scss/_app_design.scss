@@ -1,0 +1,25 @@
+.app-design {
+  display: flex;
+  position: relative;
+  .app-design-left {
+    width: 50%;
+    background-image: url('../images/split_left.png');
+  }
+  .app-design-right {
+    width: 50%;
+    background-image: url('../images/app-design/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/app-design/fill-bg.png');
+      z-index: 1;
+    }
+  }
+}

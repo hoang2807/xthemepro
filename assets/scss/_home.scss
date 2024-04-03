@@ -151,3 +151,9 @@ header {
     }
   }
 }
+
+@include mobile {
+  .home-wrapper {
+    flex-direction: column;
+  }
+}
