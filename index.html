@@ -20,11 +20,12 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="header-container">
         <div class="list-header">
-          <div class="list-header-itemLeft">
-            <span class="burger" id="burger">
+          <div class="list-header-itemLeft" id="open">
+            <span class="burger">
               <svg viewBox="0 0 34 34">
                 <circle
                   id="nav-burger-circle"
@@ -42,27 +43,32 @@
                 ></polygon>
               </svg>
             </span>
-            <span id="open">Menu</span>
+            <span>Menu</span>
           </div>
           <img src="./assets/icons/logo.svg" alt="" />
           <span class="list-header-itemRight">Contact Us</span>
         </div>
       </div>
     </header>
-    <main>
-      <!-- <div class="overlay" id="overlap">
-        <ul class="overlay-container">
-          <li>01 <span>Introduction</span></li>
-          <li>02 <span>Software development</span></li>
-          <li>03 <span>About</span></li>
-          <li>04 <span>Themes design</span></li>
-          <li>05 <span>Web Design</span></li>
-          <li>06 <span>How it work?</span></li>
-          <li>07 <span>Application Design</span></li>
-          <li>08 <span>Contact</span></li>
-        </ul>
-      </div> -->
+    <!-- Header -->
 
+    <main>
+      <!-- Overlay -->
+      <div class="overlay" id="overlay">
+        <ul class="overlay-container">
+          <li class="item">01 <span>Introduction</span></li>
+          <li class="item">02 <span>Software development</span></li>
+          <li class="item">03 <span>About</span></li>
+          <li class="item">04 <span>Themes design</span></li>
+          <li class="item">05 <span>Web Design</span></li>
+          <li class="item">06 <span>How it work?</span></li>
+          <li class="item">07 <span>Application Design</span></li>
+          <li class="item">08 <span>Contact</span></li>
+        </ul>
+      </div>
+      <!-- End Overlay -->
+
+      <!-- Wrapper-Intro -->
       <section class="wrapper-intro">
         <div class="home-wrapper">
           <div class="home-wrapperLeft">
@@ -93,7 +99,9 @@
           </div>
         </div>
       </section>
+      <!-- Wrapper-Intro -->
 
+      <!-- About -->
       <section class="about">
         <div class="about-left">
           <div class="container-about-left">
@@ -120,7 +128,9 @@
           <img src="./assets/images/like.png" alt="" class="like" />
         </div>
       </section>
+      <!-- About -->
 
+      <!-- Web Mobile -->
       <section class="web-design">
         <div class="container-image">
           <img
@@ -157,13 +167,25 @@
           </p>
         </div>
       </section>
+      <!-- End Web Mobile -->
 
+      <!-- App Design -->
       <section class="app-design">
         <div class="app-design-left"></div>
         <div class="app-design-right"></div>
+        <div class="container top"></div>
+        <div class="container bottom"></div>
       </section>
+      <!-- End App Design -->
+
+      <!-- Contact -->
+      <!-- <section class="contact">
+        <div class="contact-container"></div>
+      </section> -->
+      <!-- End Contact -->
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

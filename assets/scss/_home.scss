@@ -24,6 +24,7 @@ header {
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
   }
 
   .burger {
@@ -71,7 +72,7 @@ header {
       text-transform: uppercase;
     }
     .text-2 {
-      color: $text-dark !important;
+      color: $text-dark;
       text-shadow: 0 0 2px white;
       text-align: center;
       font-size: 90px;
@@ -88,7 +89,6 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     padding-left: 120px;
-
     .btn-home {
       margin-top: 22px;
       width: 228px;
@@ -121,13 +121,13 @@ header {
 
 .overlay {
   height: 100%;
-  width: 0;
+  width: 0%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: $bg-dark;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   display: flex;
   justify-content: center;
@@ -137,18 +137,40 @@ header {
     display: grid;
     row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    li {
+
+    .item {
       font-size: 16px;
       font-family: $font-poppins;
       font-weight: 300;
       line-height: 48px;
+      transition: 1s;
       span {
         padding-left: 40px;
         font-size: 32px;
         text-transform: uppercase;
         letter-spacing: 5px;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+          color: red;
+        }
       }
     }
+  }
+}
+
+.reveal-text {
+  animation: reveal 3s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
