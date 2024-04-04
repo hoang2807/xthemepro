@@ -688,35 +688,36 @@ ul {
   top: 90px;
   left: -195px;
 }
-.theme_design .slick {
+.theme_design .theme-list {
   position: absolute;
   top: 502px;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
   left: 430px;
 }
-.theme_design .slick .list {
-  display: flex;
-  gap: 23px;
-}
-.theme_design .slick .list .list-item {
+.theme_design .theme-list .list-item {
   display: flex;
   flex-direction: column;
+  width: 369px;
+  height: 300%;
 }
-.theme_design .slick .list .list-item .image {
+.theme_design .theme-list .list-item .image {
   width: 369px;
   height: 250px;
 }
-.theme_design .slick .list .list-item .device {
+.theme_design .theme-list .list-item .theme-device {
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
   color: #bbbbf6;
   margin-top: 24px;
 }
-.theme_design .slick .list .list-item .title {
+.theme_design .theme-list .list-item .theme-title {
   font-weight: 400;
   margin-top: 5px;
 }
-.theme_design .slick .list .list-item .price {
+.theme_design .theme-list .list-item .price {
   margin-top: 15px;
   color: #fff;
   font-weight: 700;

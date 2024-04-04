@@ -33,34 +33,35 @@
     }
   }
 
-  .slick {
+  .theme-list {
     position: absolute;
     top: 502px;
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
     left: 430px;
-    .list {
+    .list-item {
       display: flex;
-      gap: 23px;
-      .list-item {
-        display: flex;
-        flex-direction: column;
-        .image {
-          width: 369px;
-          height: 250px;
-        }
-        .device {
-          @include text-uppercase(12px, 300);
-          color: $text-light;
-          margin-top: 24px;
-        }
-        .title {
-          font-weight: 400;
-          margin-top: 5px;
-        }
-        .price {
-          margin-top: 15px;
-          color: $white;
-          font-weight: 700;
-        }
+      flex-direction: column;
+      width: 369px;
+      height: 300%;
+      .image {
+        width: 369px;
+        height: 250px;
+      }
+      .theme-device {
+        @include text-uppercase(12px, 300);
+        color: $text-light;
+        margin-top: 24px;
+      }
+      .theme-title {
+        font-weight: 400;
+        margin-top: 5px;
+      }
+      .price {
+        margin-top: 15px;
+        color: $white;
+        font-weight: 700;
       }
     }
   }
