@@ -18,21 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const t1 = gsap.timeline({ paused: true });
 
   t1.to(".overlay", {
-    duration: 1.8,
+    duration: 1,
     width: "100%",
     ease: "expo.inOut"
   });
 
-  t1.staggerTo(
-    ".overlay-container li",
-    2.0,
-    {
-      top: "0px",
-      ease: "expo.inOut"
-    },
-    0.1,
-    "-=0.8"
-  );
+  // t1.staggerTo(
+  //   ".overlay-container li",
+  //   2.0,
+  //   {
+  //     top: "0px",
+  //     ease: "expo.inOut"
+  //   },
+  //   0.1,
+  //   "-=0.8"
+  // );
+
+  t1.to('.overlay-container li', {
+    duration: 3.0,
+    yoyo: true,
+    ease: "power2.in"
+  })
 
   t1.reverse();
 

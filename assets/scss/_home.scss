@@ -143,15 +143,15 @@ header {
       font-family: $font-poppins;
       font-weight: 300;
       line-height: 48px;
-      transition: 1s;
+      display: inline;
       span {
         padding-left: 40px;
         font-size: 32px;
         text-transform: uppercase;
         letter-spacing: 5px;
+        transition: 1s;
         cursor: pointer;
         &:hover {
-          opacity: 1;
           color: red;
         }
       }

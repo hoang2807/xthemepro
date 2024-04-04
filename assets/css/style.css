@@ -140,17 +140,17 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 48px;
-  transition: 1s;
+  display: inline;
 }
 .overlay .overlay-container .item span {
   padding-left: 40px;
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  transition: 1s;
   cursor: pointer;
 }
 .overlay .overlay-container .item span:hover {
-  opacity: 1;
   color: red;
 }
 
@@ -525,22 +525,55 @@ section {
   background-image: url("../images/app-design/fill-bg.png");
   z-index: 1;
 }
-.app-design .container {
+.app-design .app-design-content {
   position: absolute;
+  max-width: 1361px;
   width: 100%;
-  height: 50%;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 230px;
+  height: 200px;
+}
+.app-design .app-design-content .app-design-container {
+  position: relative;
+  width: 62%;
+}
+.app-design .app-design-content .app-design-container .app-design-content__text {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
   align-items: end;
 }
-.app-design .top {
-  top: 0;
-  left: 0;
+.app-design .app-design-content .app-design-container .app-design-content__text > span {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
 }
-.app-design .bottom {
-  top: 50%;
-  left: 0;
+.app-design .app-design-content .app-design-container .app-design-content__text > span > span {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-left: 12px;
+}
+.app-design .app-design-content .app-design-container .app-design-content__text p {
+  width: 60%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: right;
+}
+.app-design .app-design-content .design {
+  position: absolute;
+  left: 215px;
+  top: 30px;
+}
+.app-design .app-design-content .design__text {
+  margin-top: 160px;
 }
 
 /*# sourceMappingURL=style.css.map */
