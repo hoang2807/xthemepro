@@ -12,6 +12,7 @@ $fw-bl: 900;
 
 $white: #fff;
 $text-dark: #001c43;
+$text-light: #bbbbf6;
 $bg-dark: #050b25;
 $bg-light: #01142e;
 
@@ -156,7 +157,6 @@ $bg-light: #01142e;
 }
 
 @mixin btn {
-  margin-top: 22px;
   width: 228px;
   height: 48px;
   text-transform: uppercase;

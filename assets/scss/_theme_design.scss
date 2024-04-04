@@ -18,5 +18,50 @@
     margin: 0 auto;
     right: 0;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    .light {
+      @include text-uppercase(90px, 800);
+    }
+    .dark {
+      @include text-uppercase(120px, 800);
+      @include text-transparent;
+      position: relative;
+      top: 90px;
+      left: -195px;
+    }
+  }
+
+  .slick {
+    position: absolute;
+    top: 502px;
+    left: 430px;
+    .list {
+      display: flex;
+      gap: 23px;
+      .list-item {
+        display: flex;
+        flex-direction: column;
+        .image {
+          width: 369px;
+          height: 250px;
+        }
+        .device {
+          @include text-uppercase(12px, 300);
+          color: $text-light;
+          margin-top: 24px;
+        }
+        .title {
+          font-weight: 400;
+          margin-top: 5px;
+        }
+        .price {
+          margin-top: 15px;
+          color: $white;
+          font-weight: 700;
+        }
+      }
+    }
   }
 }

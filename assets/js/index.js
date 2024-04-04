@@ -15,34 +15,70 @@ const li = document.querySelectorAll('.overlay-container li')
 // })
 
 document.addEventListener("DOMContentLoaded", function () {
-  const t1 = gsap.timeline({ paused: true });
+  // const t1 = gsap.timeline({ paused: true });
 
-  t1.to(".overlay", {
-    duration: 1,
-    width: "100%",
-    ease: "expo.inOut"
-  });
+  // t1.to(".overlay", {
+  //   duration: 1,
+  //   width: "100%",
+  //   ease: "expo.inOut"
+  // });
 
-  // t1.staggerTo(
-  //   ".overlay-container li",
-  //   2.0,
-  //   {
-  //     top: "0px",
-  //     ease: "expo.inOut"
-  //   },
-  //   0.1,
-  //   "-=0.8"
-  // );
+  // // t1.staggerTo(
+  // //   ".overlay-container li",
+  // //   2.0,
+  // //   {
+  // //     top: "0px",
+  // //     ease: "expo.inOut"
+  // //   },
+  // //   0.1,
+  // //   "-=0.8"
+  // // );
 
-  t1.to('.overlay-container li', {
-    duration: 3.0,
-    yoyo: true,
-    ease: "power2.in"
-  })
+  // t1.to('.overlay-container li', {
+  //   duration: 3.0,
+  //   yoyo: true,
+  //   ease: "power2.in"
+  // })
 
-  t1.reverse();
+  // t1.reverse();
 
-  burger.addEventListener('click', function () {
-    t1.reversed(!t1.reversed())
-  })
+  // burger.addEventListener('click', function () {
+  //   t1.reversed(!t1.reversed())
+  // })
+
+  var tl = gsap.timeline({ paused: true });
+
+  function openNav() {
+    animateOpenNav();
+    burger.onclick = function (e) {
+      // Toggle reversed to it's opposite value
+      tl.reversed(!tl.reversed());
+      // Use the toggle method in the classList API
+      burger.classList.toggle("active");
+    };
+  }
+
+  function animateOpenNav() {
+    var mobileNav = document.getElementById("mb_nav");
+    tl.to(mobileNav, {
+      duration: 0.8,
+      ease: "power3.out",
+      y: 0
+    }).to(".nav__link", {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      stagger: {
+        // wrap advanced options in an object
+        each: 0.2,
+        ease: "power1.in"
+      }
+    })
+      .reverse(); // Finally reverse the timeline. reversed() is true
+  }
+
+  // init
+  openNav();
 });
+
+

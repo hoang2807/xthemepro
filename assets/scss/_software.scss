@@ -49,14 +49,103 @@
     }
 
     @include extra-desktop {
+      .image {
+        width: 300px;
+        height: 300px;
+        right: 200px;
+      }
       .dark {
-        margin-left: 0px;
         line-height: 0.7;
+        margin-left: 180px;
+        font-size: 150px;
+      }
+      .light {
+        font-size: 130px;
+      }
+    }
+
+    @include large-desktop {
+      .light {
+        font-size: 120px;
+      }
+      .dark {
+        font-size: 100px;
+      }
+    }
+
+    @media screen and (max-width: 1250px) {
+      p {
+        margin-left: 120px;
+      }
+    }
+
+    @include desktop {
+      .light {
+        margin-left: 30px;
+        font-size: 120px;
+      }
+      .dark {
+        font-size: 100px;
+        margin-left: 110px;
+      }
+      p {
+        width: 420px;
+        font-size: 14px;
+      }
+      .image {
+        right: 110px;
+      }
+    }
+
+    @include tablet {
+      p {
+        line-height: 24px;
+        width: 410px;
+      }
+    }
+
+    @media screen and (max-width: 942px) {
+      .light {
+        font-size: 100px;
+      }
+      .dark {
+        font-size: 80px;
+        margin-left: 130px;
+      }
+      .image {
+        top: 120px;
+      }
+      p {
+        margin-left: 100px;
+      }
+    }
+
+    @include extra-mobile {
+      .light {
+        font-size: 50px;
+        margin-left: 20px;
+      }
+      .dark {
+        font-size: 30px;
+        margin-left: 80px;
+      }
+    }
+
+    @include mobile {
+      .dark {
+        margin-left: 20px;
+      }
+
+      p {
+        margin-left: 20px;
+        width: 320px;
+        margin-top: 18px;
       }
 
       .image {
-        right: 80px;
-        top: 130px;
+        scale: 0.5;
+        right: 0px;
+        top: 160px;
       }
     }
   }

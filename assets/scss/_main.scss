@@ -43,3 +43,12 @@ section {
   height: 100%;
   position: relative;
 }
+
+.btn-theme {
+  @include btn;
+}
+
+.btn-theme:hover {
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+  border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
+}
