@@ -72,15 +72,24 @@ header {
       text-transform: uppercase;
     }
     .text-2 {
-      color: transparent;
-      -webkit-text-stroke: 1px white;
+      @include text-transparent;
       text-align: center;
       font-size: 90px;
       text-transform: uppercase;
+
+      > .real {
+        font-size: 150px;
+        line-height: 0.8;
+      }
     }
     .text-3 {
       font-size: 24px;
       text-align: end;
+      > span {
+        @include text-uppercase(40px, 600);
+        letter-spacing: 6px;
+        padding-left: 12px;
+      }
     }
   }
   .home-wrapperRight {
@@ -90,17 +99,7 @@ header {
     justify-content: flex-end;
     padding-left: 120px;
     .btn-home {
-      margin-top: 22px;
-      width: 228px;
-      height: 48px;
-      text-transform: uppercase;
-      border-radius: 3px 30px 3px 30px;
-      border: 1px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
+      @include btn;
     }
 
     .btn-home:hover {

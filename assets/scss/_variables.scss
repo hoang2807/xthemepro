@@ -154,3 +154,28 @@ $bg-light: #01142e;
     height: 0;
   }
 }
+
+@mixin btn {
+  margin-top: 22px;
+  width: 228px;
+  height: 48px;
+  text-transform: uppercase;
+  border-radius: 3px 30px 3px 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@mixin text-transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+@mixin text-uppercase($fontSize, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-transform: uppercase;
+}

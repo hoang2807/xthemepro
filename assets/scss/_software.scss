@@ -20,20 +20,17 @@
     margin: 0 auto;
     right: 0;
     left: 0;
-    .text {
-      font-weight: 800;
-      text-transform: uppercase;
-    }
     .light {
       font-size: 140px;
       line-height: 0.6;
+      @include text-uppercase(140px, 800);
     }
     .dark {
       font-size: 160px;
       line-height: 0.6;
-      color: transparent;
-      -webkit-text-stroke: 1px white;
+      @include text-transparent;
       margin-left: 197px;
+      @include text-uppercase(160px, 800);
     }
     p {
       margin-left: 204px;

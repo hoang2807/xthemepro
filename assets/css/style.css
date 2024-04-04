@@ -77,9 +77,20 @@ header {
   font-size: 90px;
   text-transform: uppercase;
 }
+.home-wrapper .home-wrapperLeft .text-2 > .real {
+  font-size: 150px;
+  line-height: 0.8;
+}
 .home-wrapper .home-wrapperLeft .text-3 {
   font-size: 24px;
   text-align: end;
+}
+.home-wrapper .home-wrapperLeft .text-3 > span {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding-left: 12px;
 }
 .home-wrapper .home-wrapperRight {
   width: 50%;
@@ -598,13 +609,12 @@ section {
   right: 0;
   left: 0;
 }
-.software .content .text {
-  font-weight: 800;
-  text-transform: uppercase;
-}
 .software .content .light {
   font-size: 140px;
   line-height: 0.6;
+  font-size: 140px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 .software .content .dark {
   font-size: 160px;
@@ -612,6 +622,9 @@ section {
   color: transparent;
   -webkit-text-stroke: 1px white;
   margin-left: 197px;
+  font-size: 160px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 .software .content p {
   margin-left: 204px;
@@ -637,6 +650,29 @@ section {
     right: 80px;
     top: 130px;
   }
+}
+
+.theme_design {
+  position: relative;
+  background-image: url("../images/theme_design/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.theme_design .fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.theme_design .content {
+  position: absolute;
+  max-width: 1361px;
+  width: 100%;
+  top: 230px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

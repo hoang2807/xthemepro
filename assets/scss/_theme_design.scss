@@ -1,0 +1,22 @@
+.theme_design {
+  position: relative;
+  background-image: url('../images/theme_design/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  .fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .content {
+    position: absolute;
+    max-width: 1361px;
+    width: 100%;
+    top: 230px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+  }
+}
