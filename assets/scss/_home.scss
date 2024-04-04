@@ -72,8 +72,8 @@ header {
       text-transform: uppercase;
     }
     .text-2 {
-      color: $text-dark;
-      text-shadow: 0 0 2px white;
+      color: transparent;
+      -webkit-text-stroke: 1px white;
       text-align: center;
       font-size: 90px;
       text-transform: uppercase;

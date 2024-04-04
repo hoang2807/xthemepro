@@ -13,6 +13,7 @@ $fw-bl: 900;
 $white: #fff;
 $text-dark: #001c43;
 $bg-dark: #050b25;
+$bg-light: #01142e;
 
 // START FUNCTION
 @mixin flex($j, $a, $g) {
@@ -112,3 +113,44 @@ $bg-dark: #050b25;
 //     --width-container: 100%;
 //   }
 // }
+
+@function calculateTypeOffset($lh, $fontSize, $descenderHeightScale) {
+  $lineHeightScale: $lh / $fontSize;
+  @return ($lineHeightScale - 1) / 2 + $descenderHeightScale;
+}
+
+@mixin basekick(
+  $typeSizeModifier,
+  $baseFontSize,
+  $descenderHeightScale,
+  $typeRowSpan,
+  $gridRowHeight,
+  $capHeight
+) {
+  $fontSize: $typeSizeModifier * $baseFontSize;
+  $lineHeight: $typeRowSpan * $gridRowHeight;
+  $typeOffset: calculateTypeOffset(
+    $lineHeight,
+    $fontSize,
+    $descenderHeightScale
+  );
+  $topSpace: $lineHeight - $capHeight * $fontSize;
+  $heightCorrection: 0;
+
+  @if $topSpace > $gridRowHeight {
+    $heightCorrection: $topSpace - ($topSpace % $gridRowHeight);
+  }
+
+  $preventCollapse: 1;
+
+  font-size: #{$fontSize}px;
+  line-height: #{$lineHeight}px;
+  transform: translateY(#{$typeOffset}em);
+  padding-top: $preventCollapse;
+  &::before {
+    content: '';
+    margin-top: #{-($heightCorrection + $preventCollapse)}px;
+    display: block;
+    height: 0;
+  }
+}

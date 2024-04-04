@@ -71,8 +71,8 @@ header {
   text-transform: uppercase;
 }
 .home-wrapper .home-wrapperLeft .text-2 {
-  color: #001c43;
-  text-shadow: 0 0 2px white;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
   text-align: center;
   font-size: 90px;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ header {
 html,
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   color: #fff;
   line-height: normal;
   overflow-x: hidden;
@@ -535,7 +535,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   top: 230px;
-  height: 200px;
 }
 .app-design .app-design-content .app-design-container {
   position: relative;
@@ -574,6 +573,70 @@ section {
 }
 .app-design .app-design-content .design__text {
   margin-top: 160px;
+}
+
+.software {
+  display: flex;
+  position: relative;
+}
+.software-left {
+  width: 50%;
+  height: 100%;
+  background-color: #01142e;
+}
+.software-right {
+  width: 50%;
+  height: 100%;
+  background: #050b25;
+}
+.software .content {
+  position: absolute;
+  max-width: 1361px;
+  width: 100%;
+  top: 230px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+.software .content .text {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.software .content .light {
+  font-size: 140px;
+  line-height: 0.6;
+}
+.software .content .dark {
+  font-size: 160px;
+  line-height: 0.6;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  margin-left: 197px;
+}
+.software .content p {
+  margin-left: 204px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 586px;
+  line-height: 30px;
+}
+.software .content .image {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  right: 40px;
+  top: 160px;
+}
+@media (max-width: 1440.98px) {
+  .software .content .dark {
+    margin-left: 0px;
+    line-height: 0.7;
+  }
+  .software .content .image {
+    right: 80px;
+    top: 130px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+.software {
+  display: flex;
+  position: relative;
+  &-left {
+    width: 50%;
+    height: 100%;
+    background-color: $bg-light;
+  }
+  &-right {
+    width: 50%;
+    height: 100%;
+    background: $bg-dark;
+  }
+
+  .content {
+    position: absolute;
+    max-width: 1361px;
+    width: 100%;
+    top: 230px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    .text {
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .light {
+      font-size: 140px;
+      line-height: 0.6;
+    }
+    .dark {
+      font-size: 160px;
+      line-height: 0.6;
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+      margin-left: 197px;
+    }
+    p {
+      margin-left: 204px;
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      width: 586px;
+      line-height: 30px;
+    }
+    .image {
+      width: 420px;
+      height: 420px;
+      position: absolute;
+      right: 40px;
+      top: 160px;
+    }
+
+    @include extra-desktop {
+      .dark {
+        margin-left: 0px;
+        line-height: 0.7;
+      }
+
+      .image {
+        right: 80px;
+        top: 130px;
+      }
+    }
+  }
+}
