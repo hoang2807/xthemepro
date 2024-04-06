@@ -15,6 +15,8 @@ $text-dark: #001c43;
 $text-light: #bbbbf6;
 $bg-dark: #050b25;
 $bg-light: #01142e;
+$blue: #0096ff;
+$purple: #98a9ec;
 
 // START FUNCTION
 @mixin flex($j, $a, $g) {
@@ -178,4 +180,12 @@ $bg-light: #01142e;
   font-size: $fontSize;
   font-weight: $fontWeight;
   text-transform: uppercase;
+}
+
+@mixin title {
+  background-color: $blue;
+  text-transform: uppercase;
+  font-weight: $fw-r;
+  font-size: 12px;
+  padding: 4px 10px;
 }

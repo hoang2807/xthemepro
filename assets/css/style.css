@@ -733,4 +733,79 @@ ul {
   margin-right: 23px;
 }
 
+.contact {
+  background-image: url("../images/contact/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.contact-container {
+  max-width: 1361px;
+  width: 100%;
+  position: relative;
+  top: 224px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-container span {
+  background-color: #0096ff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+.contact-container > h2 {
+  font-weight: 600;
+  margin-top: 30px;
+  font-size: 40px;
+}
+.contact-container > p {
+  font-weight: 275;
+  font-size: 18px;
+  max-width: 893px;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 29px;
+}
+.contact-container-group {
+  display: flex;
+  margin-top: 59px;
+  gap: 52px;
+}
+.contact-container-group .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid #98a9ec;
+  padding: 21px 60px 16px 60px;
+  border-radius: 5px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.contact-container-group .item:hover {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.contact-container .copy-right {
+  margin-top: 211px;
+}
+.contact-container .social-icon {
+  display: flex;
+  gap: 34px;
+  margin-top: 21px;
+}
+
 /*# sourceMappingURL=style.css.map */
