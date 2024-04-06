@@ -854,6 +854,7 @@ ul {
   font-weight: 600;
   margin-top: 30px;
   font-size: 40px;
+  text-align: center;
 }
 .contact-container > p {
   font-weight: 275;
@@ -899,6 +900,25 @@ ul {
   display: flex;
   gap: 34px;
   margin-top: 21px;
+}
+
+@media only screen and (max-width: 480.98px) {
+  .contact-container {
+    top: 130px;
+  }
+  .contact-container .copy-right {
+    margin-top: 60px;
+    padding-inline: 5px !important;
+  }
+  .contact-container > p {
+    width: 95%;
+  }
+  .contact-container .contact-container-group {
+    margin-top: 45px;
+  }
+  .contact-container .contact-container-group .item {
+    padding: 14px 24px 12px 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

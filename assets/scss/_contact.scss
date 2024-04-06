@@ -20,6 +20,7 @@
       font-weight: $fw-sb;
       margin-top: 30px;
       font-size: 40px;
+      text-align: center;
     }
     > p {
       font-weight: 275;
@@ -71,6 +72,25 @@
       display: flex;
       gap: 34px;
       margin-top: 21px;
+    }
+  }
+}
+
+@include mobile {
+  .contact-container {
+    top: 130px;
+    .copy-right {
+      margin-top: 60px;
+      padding-inline: 5px !important;
+    }
+    > p {
+      width: 95%;
+    }
+    .contact-container-group {
+      margin-top: 45px;
+      .item {
+        padding: 14px 24px 12px 24px;
+      }
     }
   }
 }
