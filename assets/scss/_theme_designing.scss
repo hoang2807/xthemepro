@@ -1,10 +1,10 @@
 .theme-designing {
-  // position: relative;
   width: 100%;
-  min-height: 3310px;
+  min-height: 3210px;
   background-image: url('../images/list-theme/background.png');
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   background-color: rgb(2, 21, 55);
   .container-theme {
@@ -111,8 +111,5 @@
         letter-spacing: 6px;
       }
     }
-  }
-  .footer {
-    background-image: url('../images/footer.png');
   }
 }
