@@ -1,13 +1,14 @@
 .theme-designing {
-  position: relative;
+  // position: relative;
   width: 100%;
-  min-height: 4800px;
+  min-height: 3310px;
   background-image: url('../images/list-theme/background.png');
   background-size: cover;
+  background-position: center;
+  height: 100%;
   background-color: rgb(2, 21, 55);
   .container-theme {
-    position: relative;
-    top: 151px;
+    padding-top: 151px;
     margin-inline: auto;
     max-width: 1360px;
     width: 100%;
@@ -15,7 +16,7 @@
       border: 1px solid $line;
     }
     .content {
-      margin-top: 71px;
+      margin-top: 90px;
       > .btn-back {
         display: flex;
         justify-content: center;
@@ -36,6 +37,7 @@
         font-size: 90px;
         text-transform: uppercase;
         letter-spacing: 3px;
+        top: -100px;
         > span {
           position: relative;
           font-size: 120px;
@@ -47,7 +49,6 @@
       .theme-designing-title {
         position: relative;
         left: 395px;
-        top: 120px;
         > span {
           @include text-uppercase(24px, 600);
         }
@@ -62,14 +63,16 @@
   }
 
   .theme-designing-list {
-    position: relative;
-    top: 351px;
+    margin-top: 80px;
     margin-inline: auto;
     max-width: 1353px;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    &-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
     .item {
       display: flex;
       flex-direction: column;
@@ -91,5 +94,25 @@
         padding-top: 15px;
       }
     }
+
+    .show-more {
+      display: flex;
+      margin-top: 64px;
+      width: 100%;
+      gap: 20px;
+      justify-content: center;
+      @include text-uppercase(12px, 500);
+      padding: 20px 35px 20px 35px;
+      border: 0.5px solid #fff;
+      border-radius: 3px 30px 3px 30px;
+      cursor: pointer;
+      > span {
+        @include text-uppercase(12px, 500);
+        letter-spacing: 6px;
+      }
+    }
+  }
+  .footer {
+    background-image: url('../images/footer.png');
   }
 }
