@@ -41,10 +41,10 @@
     gap: 23px;
     left: 430px;
     .list-item {
-      display: flex;
-      flex-direction: column;
+      display: flex !important;
+      flex-direction: column !important;
       width: 369px;
-      height: 300%;
+      height: 369px;
       .image {
         width: 369px;
         height: 250px;
@@ -63,6 +63,21 @@
         color: $white;
         font-weight: 700;
       }
+    }
+
+    .swiper-container {
+      width: 600px;
+      height: 300px;
+    }
+    // .slick-initialized .slick-slide {
+    //   margin: 0 10px;
+    // }
+
+    .slick-slide {
+      width: 369px;
+      height: 420px;
+      box-sizing: border-box;
+      margin-right: 23px;
     }
   }
 }

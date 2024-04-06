@@ -697,10 +697,10 @@ ul {
   left: 430px;
 }
 .theme_design .theme-list .list-item {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   width: 369px;
-  height: 300%;
+  height: 369px;
 }
 .theme_design .theme-list .list-item .image {
   width: 369px;
@@ -721,6 +721,16 @@ ul {
   margin-top: 15px;
   color: #fff;
   font-weight: 700;
+}
+.theme_design .theme-list .swiper-container {
+  width: 600px;
+  height: 300px;
+}
+.theme_design .theme-list .slick-slide {
+  width: 369px;
+  height: 420px;
+  box-sizing: border-box;
+  margin-right: 23px;
 }
 
 /*# sourceMappingURL=style.css.map */
