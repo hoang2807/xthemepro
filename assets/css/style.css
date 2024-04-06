@@ -208,7 +208,7 @@ header .header-container {
     gap: 12px;
   }
   .home-wrapper .line {
-    top: 68%;
+    display: none;
   }
   .home-wrapper .home-wrapperRight {
     width: 95%;
@@ -425,6 +425,34 @@ ul {
   height: 100%;
 }
 
+@media only screen and (max-width: 480.98px) {
+  .about {
+    flex-direction: column;
+  }
+  .about .about-left {
+    width: 100%;
+    height: 60%;
+  }
+  .about .about-left .container-about-left {
+    width: 90%;
+    margin-top: 25%;
+  }
+  .about .about-left .container-about-left .about-text-left .app {
+    scale: 0.7;
+  }
+  .about .about-left .container-about-left .about-text-left .design {
+    scale: 0.7;
+    top: 15px;
+    left: 60px;
+  }
+  .about .about-left .container-about-left .about-text-left .about-design {
+    padding-top: auto;
+  }
+  .about .about-right {
+    width: 100%;
+    height: 100%;
+  }
+}
 .web-design {
   background-color: #050b25;
   position: relative;
