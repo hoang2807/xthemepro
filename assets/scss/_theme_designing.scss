@@ -1,0 +1,95 @@
+.theme-designing {
+  position: relative;
+  width: 100%;
+  min-height: 4800px;
+  background-image: url('../images/list-theme/background.png');
+  background-size: cover;
+  background-color: rgb(2, 21, 55);
+  .container-theme {
+    position: relative;
+    top: 151px;
+    margin-inline: auto;
+    max-width: 1360px;
+    width: 100%;
+    .line {
+      border: 1px solid $line;
+    }
+    .content {
+      margin-top: 71px;
+      > .btn-back {
+        display: flex;
+        justify-content: center;
+        @include btn;
+        width: 158px;
+        height: 48px;
+        gap: 20px;
+        > span {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+      > h2 {
+        position: relative;
+        left: 330px;
+        font-weight: 800;
+        font-size: 90px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        > span {
+          position: relative;
+          font-size: 120px;
+          top: 100px;
+          left: -340px;
+        }
+      }
+
+      .theme-designing-title {
+        position: relative;
+        left: 395px;
+        top: 120px;
+        > span {
+          @include text-uppercase(24px, 600);
+        }
+        > p {
+          font-weight: 275;
+          font-size: 18px;
+          width: 893px;
+          padding-top: 19px;
+        }
+      }
+    }
+  }
+
+  .theme-designing-list {
+    position: relative;
+    top: 351px;
+    margin-inline: auto;
+    max-width: 1353px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: 431px;
+      > img {
+        width: 100%;
+      }
+      > .device {
+        @include text-uppercase(12px, 300);
+        color: $text-light;
+        padding-top: 24px;
+      }
+      > .title {
+        @include text-uppercase(16px, 400);
+        padding-top: 5px;
+      }
+      > .price {
+        @include text-uppercase(16px, 700);
+        padding-top: 15px;
+      }
+    }
+  }
+}
