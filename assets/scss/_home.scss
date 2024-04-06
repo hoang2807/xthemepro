@@ -179,8 +179,78 @@ header {
   }
 }
 
+@media screen and (max-width: 2048px) {
+  .home-wrapper {
+    padding-top: 30%;
+  }
+}
+
+@media screen and (max-width: 773px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      width: 100%;
+      .text-3 {
+        text-align: center;
+      }
+    }
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    .line {
+      left: auto;
+      width: 300px !important;
+      transform: rotate(0);
+    }
+    .home-wrapperRight {
+      padding-left: 0;
+      width: 60%;
+      padding-top: 12px;
+    }
+  }
+}
+
 @include mobile {
   .home-wrapper {
     flex-direction: column;
+    gap: 12px;
+    .line {
+      top: 68%;
+    }
+    .home-wrapperRight {
+      width: 95%;
+      padding-top: 8px;
+    }
+  }
+}
+
+@include small-mobile {
+  .home-wrapper {
+    padding-top: 25%;
+    width: 95%;
+    gap: 0;
+    .line {
+      display: none;
+    }
+    .home-wrapperLeft {
+      gap: 8px;
+      .text-2 {
+        font-size: 80px;
+        > .real {
+          font-size: 110px;
+          line-height: 0.4;
+        }
+      }
+      .text-3 {
+        font-size: 20px;
+        > {
+          span {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    .home-wrapperRight {
+      padding-top: 4px;
+    }
   }
 }
