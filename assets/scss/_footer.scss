@@ -13,8 +13,7 @@
     }
 
     p {
-      font-weight: 275;
-      font-size: 18px;
+      @include font-p;
     }
 
     .footer-group {
@@ -53,13 +52,16 @@
     }
 
     .copy-right {
-      @include copyright;
+      @include font-p;
       margin-top: 123px;
     }
     .social-icon {
       display: flex;
       gap: 34px;
       margin-top: 19px;
+      > img {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -48,6 +48,7 @@ section {
 
 .btn-theme {
   @include btn;
+  letter-spacing: 3px;
 }
 
 .btn-theme:hover {

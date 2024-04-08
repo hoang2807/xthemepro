@@ -1,7 +1,6 @@
 .theme-designing {
   width: 100%;
-  min-height: 3210px;
-  background-image: url('../images/list-theme/background.png');
+  background-image: url('../images/background-theme.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +17,6 @@
     .content {
       margin-top: 90px;
       > .btn-theme {
-        display: flex;
         justify-content: center;
         width: 158px;
         height: 48px;
@@ -52,8 +50,7 @@
           @include text-uppercase(24px, 600);
         }
         > p {
-          font-weight: 275;
-          font-size: 18px;
+          @include font-p;
           width: 893px;
           padding-top: 19px;
         }

@@ -24,8 +24,7 @@
       text-align: center;
     }
     > p {
-      font-weight: 275;
-      font-size: 18px;
+      @include font-p;
       max-width: 893px;
       width: 100%;
       text-align: center;
@@ -67,12 +66,16 @@
       }
     }
     .copy-right {
+      @include font-p;
       margin-top: 211px;
     }
     .social-icon {
       display: flex;
       gap: 34px;
       margin-top: 21px;
+      > img {
+        cursor: pointer;
+      }
     }
   }
 }

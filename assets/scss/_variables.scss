@@ -13,6 +13,7 @@ $fw-bl: 900;
 $white: #fff;
 $text-dark: #001c43;
 $text-light: #bbbbf6;
+$text-blue: #749adb;
 $bg-dark: #050b25;
 $bg-light: #01142e;
 $blue: #0096ff;
@@ -191,7 +192,8 @@ $line: #133670;
   padding: 4px 10px;
 }
 
-@mixin copyright {
+@mixin font-p {
   font-size: 18px;
   font-weight: 275;
+  letter-spacing: 1px;
 }
