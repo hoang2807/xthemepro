@@ -74,6 +74,72 @@
   }
 }
 
+@media screen and (max-width: 1318px) {
+  .container-about-left {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 1172px) {
+  .container-about-left {
+    margin-left: 22px;
+    width: 90%;
+    .app {
+      scale: 0.9;
+      left: 108px;
+      top: 9px;
+    }
+    .design {
+      scale: 0.9;
+      left: 102px;
+      top: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .container-about-left {
+    width: 90%;
+    left: 106px;
+    top: 9px;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .about {
+    flex-direction: column;
+    .about-left {
+      width: 100%;
+      height: 40%;
+      .container-about-left {
+        margin-top: 110px;
+        margin-left: 21px;
+        width: 500px;
+        gap: 1px;
+        .design {
+          top: 12px;
+          left: 107px;
+        }
+      }
+    }
+    .about-right {
+      width: 100%;
+      height: calc(100% - 40%);
+    }
+  }
+}
+
+@media screen and (max-width: 526px) {
+  .about {
+    .about-left {
+      height: 50%;
+    }
+    .about-right {
+      height: calc(100% - 50%);
+    }
+  }
+}
+
 @include mobile {
   .about {
     flex-direction: column;
@@ -101,6 +167,19 @@
     .about-right {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .about {
+    .about-left {
+      // .app {
+
+      // }
+      .about-design-text {
+        width: 65%;
+      }
     }
   }
 }

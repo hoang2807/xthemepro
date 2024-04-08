@@ -116,15 +116,47 @@
   }
 
   @include tablet {
+    .container-text {
+      width: 60%;
+    }
     .container-image {
+      .plan {
+        bottom: -10px;
+      }
     }
   }
 
-  @include landscape-phone {
+  @media screen and (max-width: 963px) {
     .container-text {
       gap: 14px;
       .text {
         margin-right: auto;
+      }
+
+      .text-image {
+        .web {
+          scale: 0.7;
+          left: -152px;
+        }
+        .design {
+          top: 7px;
+          scale: 0.7;
+          left: -27px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 695px) {
+    .container-text {
+      .text-image {
+        .web {
+          left: -199px;
+        }
+
+        .design {
+          left: -75px;
+        }
       }
     }
   }
