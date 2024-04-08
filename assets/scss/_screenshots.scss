@@ -1,0 +1,54 @@
+.screenshot {
+  background-color: $bg-dark;
+  width: 100%;
+  padding-bottom: 136px;
+  &-container {
+    max-width: 1210px;
+    width: 100%;
+    padding-top: 95px;
+    margin-inline: auto;
+    > h2 {
+      @include text-uppercase(40px, 600);
+      line-height: 60px;
+      letter-spacing: 0.015em;
+      text-align: center;
+    }
+    > p {
+      @include font-p;
+      line-height: 30px;
+      margin: 10px auto 0 auto;
+      letter-spacing: 0.03em;
+      text-align: center;
+      max-width: 793px;
+      width: 100%;
+    }
+    &-list {
+      margin-top: 62px;
+      width: 97%;
+      .slick-slide {
+        width: 370px;
+        margin-right: 25px;
+        > div {
+          margin-bottom: 25px;
+        }
+        img {
+          max-width: 370px;
+          height: 270px;
+        }
+      }
+
+      .prev {
+        background: url('../icons/prevArrow.svg');
+        display: block;
+        height: 45px;
+        width: 245px;
+      }
+      .next {
+        background: url('../icons/nextArrow.svg');
+        display: block;
+        height: 45px;
+        width: 245px;
+      }
+    }
+  }
+}

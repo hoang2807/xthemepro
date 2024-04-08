@@ -16,10 +16,12 @@ $text-light: #bbbbf6;
 $text-blue: #749adb;
 $bg-dark: #050b25;
 $bg-light: #01142e;
+$bg-blue: #0c024c;
+$bg-purple: #170a64;
 $blue: #0096ff;
 $purple: #98a9ec;
 $line: #133670;
-
+$border: #5f54a2;
 // START FUNCTION
 @mixin flex($j, $a, $g) {
   display: flex;

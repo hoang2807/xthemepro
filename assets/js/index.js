@@ -100,4 +100,14 @@ $(document).ready(function () {
       }
     ]
   });
+
+  $('.screenshot-container-list').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    rows: 3,
+    variableWidth: true,
+    // prevArrow: $('.prev'),
+    // nextArrow: $('.next'),
+  })
 });

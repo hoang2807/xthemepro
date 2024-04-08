@@ -1186,6 +1186,124 @@ ul {
   letter-spacing: 0.015em;
 }
 
+.screenshot {
+  background-color: #050b25;
+  width: 100%;
+  padding-bottom: 136px;
+}
+.screenshot-container {
+  max-width: 1210px;
+  width: 100%;
+  padding-top: 95px;
+  margin-inline: auto;
+}
+.screenshot-container > h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 60px;
+  letter-spacing: 0.015em;
+  text-align: center;
+}
+.screenshot-container > p {
+  font-size: 18px;
+  font-weight: 275;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin: 10px auto 0 auto;
+  letter-spacing: 0.03em;
+  text-align: center;
+  max-width: 793px;
+  width: 100%;
+}
+.screenshot-container-list {
+  margin-top: 62px;
+  width: 97%;
+}
+.screenshot-container-list .slick-slide {
+  width: 370px;
+  margin-right: 25px;
+}
+.screenshot-container-list .slick-slide > div {
+  margin-bottom: 25px;
+}
+.screenshot-container-list .slick-slide img {
+  max-width: 370px;
+  height: 270px;
+}
+.screenshot-container-list .prev {
+  background: url("../icons/prevArrow.svg");
+  display: block;
+  height: 45px;
+  width: 245px;
+}
+.screenshot-container-list .next {
+  background: url("../icons/nextArrow.svg");
+  display: block;
+  height: 45px;
+  width: 245px;
+}
+
+.mobile-first {
+  background-color: #0c024c;
+  position: relative;
+  height: 750px;
+}
+.mobile-first-container {
+  padding-top: 136px;
+  padding-left: 120px;
+  width: 497px;
+  z-index: 3;
+}
+.mobile-first-container > span {
+  background-color: #0096ff;
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.mobile-first-container > h2 {
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+.mobile-first-container > p {
+  font-size: 18px;
+  font-weight: 275;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+.mobile-first-container > .available {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  line-height: 15px;
+  margin-top: 30px;
+}
+.mobile-first-container .group {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+.mobile-first-container .group > .item {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  background-color: #170a64;
+  border: 1px solid #5f54a2;
+}
+.mobile-first > .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .footer {
   background-image: url("../images/footer.png");
   width: 100%;
