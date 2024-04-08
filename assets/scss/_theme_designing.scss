@@ -17,10 +17,9 @@
     }
     .content {
       margin-top: 90px;
-      > .btn-back {
+      > .btn-theme {
         display: flex;
         justify-content: center;
-        @include btn;
         width: 158px;
         height: 48px;
         gap: 20px;
@@ -62,11 +61,12 @@
     }
   }
 
-  .theme-designing-list {
+  &-list {
     margin-top: 80px;
     margin-inline: auto;
     max-width: 1353px;
     width: 100%;
+    padding-bottom: 110px;
     &-container {
       width: 100%;
       display: grid;
@@ -95,7 +95,7 @@
       }
     }
 
-    .show-more {
+    #show-more {
       display: flex;
       margin-top: 64px;
       width: 100%;

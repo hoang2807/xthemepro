@@ -60,6 +60,7 @@ header .header-container {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 .home-wrapper {
@@ -300,7 +301,7 @@ section {
 }
 
 .btn-theme:hover {
-  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+  background-image: linear-gradient(to right, #103ce7, #64e9ff);
   border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
 }
 
@@ -353,8 +354,7 @@ ul {
 
 .about {
   display: flex;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
 }
 .about .about-left {
@@ -452,6 +452,7 @@ ul {
 .web-design {
   background-color: #050b25;
   position: relative;
+  height: 100vh;
 }
 .web-design .container-image {
   width: 60%;
@@ -518,6 +519,7 @@ ul {
 .app-design {
   display: flex;
   position: relative;
+  height: 100vh;
 }
 .app-design .app-design-left {
   width: 50%;
@@ -593,6 +595,7 @@ ul {
 .software {
   display: flex;
   position: relative;
+  height: 100vh;
 }
 .software-left {
   width: 50%;
@@ -744,6 +747,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100vh;
 }
 .theme_design .fill {
   position: absolute;
@@ -828,6 +832,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100vh;
 }
 .contact-container {
   max-width: 1361px;
@@ -938,24 +943,14 @@ ul {
 .theme-designing .container-theme .content {
   margin-top: 90px;
 }
-.theme-designing .container-theme .content > .btn-back {
+.theme-designing .container-theme .content > .btn-theme {
   display: flex;
   justify-content: center;
-  width: 228px;
-  height: 48px;
-  text-transform: uppercase;
-  border-radius: 3px 30px 3px 30px;
-  border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   width: 158px;
   height: 48px;
   gap: 20px;
 }
-.theme-designing .container-theme .content > .btn-back > span {
+.theme-designing .container-theme .content > .btn-theme > span {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -990,46 +985,47 @@ ul {
   width: 893px;
   padding-top: 19px;
 }
-.theme-designing .theme-designing-list {
+.theme-designing-list {
   margin-top: 80px;
   margin-inline: auto;
   max-width: 1353px;
   width: 100%;
+  padding-bottom: 110px;
 }
-.theme-designing .theme-designing-list-container {
+.theme-designing-list-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-.theme-designing .theme-designing-list .item {
+.theme-designing-list .item {
   display: flex;
   flex-direction: column;
   width: 431px;
 }
-.theme-designing .theme-designing-list .item > img {
+.theme-designing-list .item > img {
   width: 100%;
 }
-.theme-designing .theme-designing-list .item > .device {
+.theme-designing-list .item > .device {
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
   color: #bbbbf6;
   padding-top: 24px;
 }
-.theme-designing .theme-designing-list .item > .title {
+.theme-designing-list .item > .title {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   padding-top: 5px;
 }
-.theme-designing .theme-designing-list .item > .price {
+.theme-designing-list .item > .price {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   padding-top: 15px;
 }
-.theme-designing .theme-designing-list .show-more {
+.theme-designing-list #show-more {
   display: flex;
   margin-top: 64px;
   width: 100%;
@@ -1043,7 +1039,7 @@ ul {
   border-radius: 3px 30px 3px 30px;
   cursor: pointer;
 }
-.theme-designing .theme-designing-list .show-more > span {
+.theme-designing-list #show-more > span {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1053,7 +1049,7 @@ ul {
 .footer {
   background-image: url("../images/footer.png");
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: 34px;
 }
 .footer-container {
   display: flex;
