@@ -103,13 +103,20 @@
     }
     .container-image {
       .plan {
-        left: 20px;
-        bottom: 0;
+        scale: 0.7;
+        bottom: 20px;
+        left: -30px;
       }
       .book {
-        left: 260px;
-        bottom: 30px;
+        scale: 0.8;
+        left: 210px;
+        bottom: 120px;
       }
+    }
+  }
+
+  @include tablet {
+    .container-image {
     }
   }
 
