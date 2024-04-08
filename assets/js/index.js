@@ -48,8 +48,8 @@ $(document).ready(function () {
     arrows: true,
     draggable: false,
     variableWidth: true,
-    prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
-    nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
     dots: true,
     responsive: [
       {
@@ -74,10 +74,10 @@ $(document).ready(function () {
   $('.theme-detail-slider').slick({
     centerMode: true,
     infinite: true,
-    centerPadding: '0',
+    centerPadding: '120px',
     slidesToScroll: 1,
     slidesToShow: 1,
-    arrows: true,
+    arrows: false,
     variableWidth: true,
     responsive: [
       {
@@ -107,7 +107,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     rows: 3,
     variableWidth: true,
-    // prevArrow: $('.prev'),
-    // nextArrow: $('.next'),
+    prevArrow: $('.arrow-prev'),
+    nextArrow: $('.arrow-next'),
   })
 });

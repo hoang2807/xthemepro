@@ -27,7 +27,6 @@
       bottom: 140px;
     }
   }
-
   .container-text {
     position: relative;
     top: 30%;
@@ -71,6 +70,55 @@
       font-weight: 400;
       width: 494px;
       text-align: right;
+    }
+  }
+
+  @include extra-desktop {
+    .container-image {
+      .plan {
+        left: 80px;
+      }
+
+      .book {
+        left: 300px;
+      }
+    }
+
+    .container-text {
+      left: 25%;
+    }
+  }
+
+  @media screen and (max-width: 1220px) {
+    .container-text {
+      top: 20%;
+      .text-image {
+        .web {
+          left: -160px;
+        }
+        .design {
+          left: 85px;
+        }
+      }
+    }
+    .container-image {
+      .plan {
+        left: 20px;
+        bottom: 0;
+      }
+      .book {
+        left: 260px;
+        bottom: 30px;
+      }
+    }
+  }
+
+  @include landscape-phone {
+    .container-text {
+      gap: 14px;
+      .text {
+        margin-right: auto;
+      }
     }
   }
 }

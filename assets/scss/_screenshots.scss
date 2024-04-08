@@ -7,6 +7,7 @@
     width: 100%;
     padding-top: 95px;
     margin-inline: auto;
+    position: relative;
     > h2 {
       @include text-uppercase(40px, 600);
       line-height: 60px;
@@ -36,19 +37,18 @@
           height: 270px;
         }
       }
-
-      .prev {
-        background: url('../icons/prevArrow.svg');
-        display: block;
-        height: 45px;
-        width: 245px;
-      }
-      .next {
-        background: url('../icons/nextArrow.svg');
-        display: block;
-        height: 45px;
-        width: 245px;
-      }
+    }
+    .arrow-prev {
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      cursor: pointer;
+    }
+    .arrow-next {
+      position: absolute;
+      top: 50%;
+      right: -65px;
+      cursor: pointer;
     }
   }
 }

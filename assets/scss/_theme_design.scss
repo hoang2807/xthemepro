@@ -33,52 +33,64 @@
       left: -195px;
     }
   }
-
-  .theme-list {
+  .container-theme-slick {
     position: absolute;
     top: 502px;
-    display: flex;
-    flex-direction: row;
-    gap: 23px;
     left: 430px;
-    .list-item {
-      display: flex !important;
-      flex-direction: column !important;
-      width: 369px;
-      height: 369px;
-      .image {
+    .theme-list {
+      display: flex;
+      flex-direction: row;
+      gap: 23px;
+      .list-item {
+        display: flex !important;
+        flex-direction: column !important;
         width: 369px;
-        height: 250px;
+        height: 369px;
+        .image {
+          width: 369px;
+          height: 250px;
+        }
+        .theme-device {
+          @include text-uppercase(12px, 300);
+          color: $text-light;
+          margin-top: 24px;
+        }
+        .theme-title {
+          font-weight: 400;
+          margin-top: 5px;
+        }
+        .price {
+          margin-top: 15px;
+          color: $white;
+          font-weight: 700;
+        }
       }
-      .theme-device {
-        @include text-uppercase(12px, 300);
-        color: $text-light;
-        margin-top: 24px;
+
+      .swiper-container {
+        width: 600px;
+        height: 300px;
       }
-      .theme-title {
-        font-weight: 400;
-        margin-top: 5px;
-      }
-      .price {
-        margin-top: 15px;
-        color: $white;
-        font-weight: 700;
+      // .slick-initialized .slick-slide {
+      //   margin: 0 10px;
+      // }
+
+      .slick-slide {
+        width: 369px;
+        height: 420px;
+        box-sizing: border-box;
+        margin-right: 23px;
       }
     }
 
-    .swiper-container {
-      width: 600px;
-      height: 300px;
+    .prev {
+      position: absolute;
+      top: 25%;
+      left: -20px;
     }
-    // .slick-initialized .slick-slide {
-    //   margin: 0 10px;
-    // }
-
-    .slick-slide {
-      width: 369px;
-      height: 420px;
-      box-sizing: border-box;
-      margin-right: 23px;
+    .next {
+      position: absolute;
+      top: 25%;
+      left: 1150px;
     }
   }
 }
