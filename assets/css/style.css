@@ -386,6 +386,7 @@ ul {
   left: 130px;
 }
 .about .about-left .container-about-left .text {
+  color: transparent;
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
@@ -527,6 +528,7 @@ ul {
   background-clip: padding-box, text;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  animation: revealText 1200ms ease-out;
   animation: t 2s 0.5s both, b 2s 1.3s both;
 }
 
@@ -550,6 +552,21 @@ ul {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+@keyframes revealText {
+  80% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+@keyframes showText {
+  to {
+    color: #1d3557;
   }
 }
 .web-design {

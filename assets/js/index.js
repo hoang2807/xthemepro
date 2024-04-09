@@ -132,23 +132,24 @@ $(document).ready(function () {
   //     toggleClass: { targets: listItem[index], className: "active" }
   //   });
   // });
-  const about_design = document.querySelector('.container-about-left .text')
+  const about_text = document.querySelector('.container-about-left .text')
+  const about_design = document.querySelector('about-design')
 
-  let tl = gsap.timeline({
+  gsap.from(about_text, {
     scrollTrigger: {
-      trigger: about_design,
-      start: "top 30%",
+      trigger: about_text,
+      start: "top 60%",
       end: "end 60%",
       markers: true,
       // scrub: true,
       onEnter: () => {
         console.log('onEnter'),
+          about_text.classList.add('reveal-about'),
           about_design.classList.add('reveal-about')
       },
       onEnterBack: () => console.log('onEnterBack'),
       onLeave: () => console.log('onLeave'),
-      onLeaveBack: () => console.log('onLeaveBack'),
-      pin: '.about'
+      onLeaveBack: () => console.log('onLeaveBack')
     }
   })
 });
