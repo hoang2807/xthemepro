@@ -78,7 +78,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     slidesToShow: 1,
     arrows: false,
-    variableWidth: true,
+    // variableWidth: true,
     responsive: [
       {
         breakpoint: 768,
@@ -132,26 +132,6 @@ $(document).ready(function () {
   //     toggleClass: { targets: listItem[index], className: "active" }
   //   });
   // });
-  const about_text = document.querySelector('.container-about-left .text')
-  const about_design = document.querySelector('.about-design-text')
-
-  gsap.from(about_text, {
-    scrollTrigger: {
-      trigger: about_text,
-      start: "top 70%",
-      end: "bottom 20%",
-      markers: true,
-      // scrub: true,
-      onEnter: () => {
-        console.log('onEnter');
-        about_text.classList.add('reveal-about');
-        about_design.classList.add('reveal-about');
-      },
-      onEnterBack: () => console.log('onEnterBack'),
-      onLeave: () => console.log('onLeave'),
-      onLeaveBack: () => console.log('onLeaveBack')
-    }
-  })
 
 
   // reveal up
@@ -258,3 +238,13 @@ function hideTiles() {
 
 
 // })(jQuery);
+
+$('.btn-theme').click(function () {
+  myFunction(this);
+});
+
+function myFunction(element) {
+  console.log(element);
+  console.log(element.id);
+  console.log($(element).attr("class"));
+}

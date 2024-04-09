@@ -32,9 +32,30 @@
       .slick-next:before {
         color: black;
       }
+
+      .btn {
+        & .text {
+          height: fit-content;
+          font-size: 24px;
+          line-height: 1;
+        }
+        &:hover {
+          & .text {
+          }
+        }
+      }
     </style>
   </head>
   <body>
+    <button class="btn">
+      <span class="overlay">
+        <span class="text-wrapper">
+          <span class="text">Hover me</span>
+          <span class="text cloned-text">Hover me</span>
+        </span>
+      </span>
+    </button>
+
     <section class="regular slider">
       <div>
         <img src="http://placehold.it/350x300?text=1" />
