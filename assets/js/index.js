@@ -138,8 +138,8 @@ $(document).ready(function () {
   gsap.from(about_text, {
     scrollTrigger: {
       trigger: about_text,
-      start: "top 60%",
-      end: "end 60%",
+      start: "top 70%",
+      end: "bottom 20%",
       markers: true,
       // scrub: true,
       onEnter: () => {
@@ -152,5 +152,109 @@ $(document).ready(function () {
       onLeaveBack: () => console.log('onLeaveBack')
     }
   })
+
+
+  // reveal up
+  gsap.utils.toArray(".revealUp").forEach(function (elem) {
+    ScrollTrigger.create({
+      trigger: elem,
+      start: "top 70%",
+      end: "bottom 20%",
+      markers: true,
+      onEnter: function () {
+        gsap.fromTo(
+          elem,
+          { y: 100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto"
+          }
+        );
+      },
+      onLeave: function () {
+        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+      },
+      onEnterBack: function () {
+        gsap.fromTo(
+          elem,
+          { y: -100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto"
+          }
+        );
+      },
+      onLeaveBack: function () {
+        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+      }
+    });
+  });
+
 });
 
+function showTiles() {
+  var tl = gsap.timeline();
+
+  // show tiles
+  tl.to("ul.transition li", {
+    duration: .2,
+    scaleY: 1,
+    transformOrigin: "bottom left",
+    stagger: .2
+  })
+
+  gsap.fromTo(".popup__content", 1, {
+    opacity: 0,
+    y: 50,
+  }, {
+    opacity: 1,
+    y: 0,
+    delay: 1,
+  });
+}
+
+function hideTiles() {
+  var tl = gsap.timeline();
+  gsap.fromTo(".popup__content", 1, {
+    opacity: 1,
+    y: 0,
+  }, {
+    opacity: 0,
+    y: 50,
+  });
+  tl.to("ul.transition li", {
+    duration: .2,
+    scaleY: 0,
+    transformOrigin: "bottom right",
+    stagger: .2,
+    delay: 1
+  })
+}
+
+// (function ($) {
+
+//   let openPopup = $(".list-header-itemRight");
+//   let closePopup = $(".popup-close");
+//   let popup = $(".popup");
+
+//   openPopup.click(function (e) {
+//     e.preventDefault();
+//     popup.addClass("popup--open");
+//     showTiles();
+//   });
+
+//   closePopup.click(function () {
+//     setTimeout(function () {
+//       popup.removeClass("popup--open");
+//     }, 1000);
+//     hideTiles();
+//   });
+
+
+// })(jQuery);

@@ -129,15 +129,19 @@
       <div class="about-left">
         <div class="container-about-left">
           <div class="about-text-left">
-            <img src="./assets/images/app.png" alt="app" class="app" />
-            <img src="./assets/images/Subtract.png" alt="" class="design" />
+            <img src="./assets/images/app.png" alt="app" class="app revealUp" />
+            <img
+              src="./assets/images/Subtract.png"
+              alt=""
+              class="design revealUp"
+            />
           </div>
-          <p class="text">
+          <p class="text revealUp">
             Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
             wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
             nutzen, ist, dass es mehr oder weniger die normale Anordnung von...
           </p>
-          <div class="about-design">
+          <div class="about-design revealUp">
             <img src="./assets/icons/design.svg" alt="" />
             <p class="about-design-text" id="about-text">
               wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen
@@ -173,15 +177,15 @@
       </div>
       <div class="container-text">
         <div class="text-image">
-          <img src="./assets/images/web.png" alt="Web" class="web" />
+          <img src="./assets/images/web.png" alt="Web" class="web revealUp" />
           <img
             src="./assets/images/web-design/design.png"
             alt="Design"
-            class="design"
+            class="design revealUp"
           />
         </div>
-        <span class="text">for <span>All industries</span></span>
-        <p>
+        <span class="text revealUp">for <span>All industries</span></span>
+        <p class="revealUp">
           Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
           wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
           nutzen, ist, dass es mehr oder weniger die normale Anordnung von...
@@ -196,15 +200,19 @@
       <div class="app-design-right"></div>
       <div class="app-design-content">
         <div class="app-design-container">
-          <img src="./assets/images/app-design/app.png" alt="app" class="app" />
+          <img
+            src="./assets/images/app-design/app.png"
+            alt="app"
+            class="app revealUp"
+          />
           <img
             src="./assets/images/app-design/design.png"
             alt="design"
-            class="design"
+            class="design revealUp"
           />
           <div class="app-design-content__text">
-            <span>for <span>mobile & tablet</span></span>
-            <p>
+            <span class="revealUp">for <span>mobile & tablet</span></span>
+            <p class="revealUp">
               Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
               wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
               nutzen, ist, dass es mehr oder weniger die normale Anordnung
@@ -221,9 +229,9 @@
       <div class="software-left"></div>
       <div class="software-right"></div>
       <div class="content">
-        <span class="light">software</span>
-        <span class="dark">development</span>
-        <p>
+        <span class="light revealUp">software</span>
+        <span class="dark revealUp">development</span>
+        <p class="revealUp">
           Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
           wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
           nutzen, ist, dass es mehr oder weniger die normale Anordnung von er
@@ -232,7 +240,7 @@
         <img
           src="./assets/images/software/image.png"
           alt="image"
-          class="image"
+          class="image revealUp"
         />
       </div>
     </section>
@@ -718,6 +726,24 @@
         </div>
       </div>
     </div>
+
+    <div class="popup">
+      <ul class="transition">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div class="popup__content popup__hide">
+        <a class="popup-close link">Close</a>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
     <!-- </main> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -731,24 +757,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
     <script src="./assets/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
-    <script>
-      // const lenis = new Lenis();
-
-      // lenis.on('scroll', (e) => {
-      //   console.log(e);
-      // });
-
-      // function raf(time) {
-      //   lenis.raf(time);
-      //   requestAnimationFrame(raf);
-      // }
-
-      // requestAnimationFrame(raf);
-    </script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
