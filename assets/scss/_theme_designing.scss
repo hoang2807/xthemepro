@@ -145,4 +145,17 @@
       }
     }
   }
+
+  @media screen and (max-width: 1094px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: 192px;
+        }
+        .theme-designing-title {
+          left: 256px;
+        }
+      }
+    }
+  }
 }

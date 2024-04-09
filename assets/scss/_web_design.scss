@@ -151,11 +151,49 @@
     .container-text {
       .text-image {
         .web {
-          left: -199px;
+          left: -226px;
         }
 
         .design {
-          left: -75px;
+          left: -101px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 616px) {
+    .container-text {
+      .text-image {
+        .web {
+          scale: 0.5;
+          left: -180px;
+        }
+        .design {
+          scale: 0.5;
+          left: -135px;
+          top: 1px;
+        }
+      }
+      .text {
+        margin-top: 107px;
+      }
+      > p {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 446px) {
+    .container-text {
+      width: 70%;
+      .text-image {
+        .web {
+          scale: 0.4;
+          left: -180px;
+        }
+        .design {
+          scale: 0.4;
+          left: -176px;
         }
       }
     }

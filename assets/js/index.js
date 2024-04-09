@@ -111,7 +111,7 @@ $(document).ready(function () {
     nextArrow: $('.arrow-next'),
     responsive: [
       {
-        breakpoint: 1310,
+        breakpoint: 1296,
         settings: {
           arrows: false,
           slidesToShow: 2
@@ -133,7 +133,7 @@ $(document).ready(function () {
   //   });
   // });
   const about_text = document.querySelector('.container-about-left .text')
-  const about_design = document.querySelector('about-design')
+  const about_design = document.querySelector('.about-design-text')
 
   gsap.from(about_text, {
     scrollTrigger: {
@@ -143,9 +143,9 @@ $(document).ready(function () {
       markers: true,
       // scrub: true,
       onEnter: () => {
-        console.log('onEnter'),
-          about_text.classList.add('reveal-about'),
-          about_design.classList.add('reveal-about')
+        console.log('onEnter');
+        about_text.classList.add('reveal-about');
+        about_design.classList.add('reveal-about');
       },
       onEnterBack: () => console.log('onEnterBack'),
       onLeave: () => console.log('onLeave'),

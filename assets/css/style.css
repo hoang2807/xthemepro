@@ -398,6 +398,7 @@ ul {
   gap: 18px;
 }
 .about .about-left .container-about-left .about-design .about-design-text {
+  color: transparent;
   width: 50%;
   font-weight: 400;
   font-size: 14px;
@@ -694,10 +695,40 @@ ul {
 }
 @media screen and (max-width: 695px) {
   .web-design .container-text .text-image .web {
-    left: -199px;
+    left: -226px;
   }
   .web-design .container-text .text-image .design {
-    left: -75px;
+    left: -101px;
+  }
+}
+@media screen and (max-width: 616px) {
+  .web-design .container-text .text-image .web {
+    scale: 0.5;
+    left: -180px;
+  }
+  .web-design .container-text .text-image .design {
+    scale: 0.5;
+    left: -135px;
+    top: 1px;
+  }
+  .web-design .container-text .text {
+    margin-top: 107px;
+  }
+  .web-design .container-text > p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 446px) {
+  .web-design .container-text {
+    width: 70%;
+  }
+  .web-design .container-text .text-image .web {
+    scale: 0.4;
+    left: -180px;
+  }
+  .web-design .container-text .text-image .design {
+    scale: 0.4;
+    left: -176px;
   }
 }
 
@@ -1271,6 +1302,14 @@ ul {
 @media screen and (max-width: 1128px) {
   .theme-designing .container-theme .content .theme-designing-title > p {
     width: 632px;
+  }
+}
+@media screen and (max-width: 1094px) {
+  .theme-designing .container-theme .content > h2 {
+    left: 192px;
+  }
+  .theme-designing .container-theme .content .theme-designing-title {
+    left: 256px;
   }
 }
 
