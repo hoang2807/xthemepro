@@ -55,3 +55,7 @@ section {
   background-image: linear-gradient(to right, #103ce7, #64e9ff);
   border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
 }
+
+.split-child {
+  display: inline-block;
+}

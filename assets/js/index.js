@@ -3,7 +3,7 @@ const overlay = document.getElementById('overlay')
 const li = document.querySelectorAll('.overlay-container li')
 
 document.addEventListener("DOMContentLoaded", function () {
-
+  gsap.registerPlugin(ScrollTrigger)
   var tl = gsap.timeline({ paused: true });
 
   function openNav() {
@@ -109,5 +109,47 @@ $(document).ready(function () {
     variableWidth: true,
     prevArrow: $('.arrow-prev'),
     nextArrow: $('.arrow-next'),
+    responsive: [
+      {
+        breakpoint: 1310,
+        settings: {
+          arrows: false,
+          slidesToShow: 2
+        }
+      }
+    ]
+  })
+
+  //   let sections = gsap.utils.toArray("section");
+  // let listItem = gsap.utils.toArray("li");
+
+  // sections.forEach((section, index) => {
+  //   ScrollTrigger.create({
+  //     trigger: section,
+  //     markers: true,
+  //     start: 'top bottom',
+  //     end: 'bottom bottom',
+  //     toggleClass: { targets: listItem[index], className: "active" }
+  //   });
+  // });
+  const about_design = document.querySelector('.container-about-left .text')
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: about_design,
+      start: "top 30%",
+      end: "end 60%",
+      markers: true,
+      // scrub: true,
+      onEnter: () => {
+        console.log('onEnter'),
+          about_design.classList.add('reveal-about')
+      },
+      onEnterBack: () => console.log('onEnterBack'),
+      onLeave: () => console.log('onLeave'),
+      onLeaveBack: () => console.log('onLeaveBack'),
+      pin: '.about'
+    }
   })
 });
+

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger)
   const t1 = gsap.timeline({ paused: true });
 
   t1.to(".nav", {
@@ -35,3 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+

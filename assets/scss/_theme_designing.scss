@@ -109,4 +109,40 @@
       }
     }
   }
+
+  @media screen and (max-width: 1362px) {
+    .theme-designing-list-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1282px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: 237px;
+        }
+
+        .theme-designing-title {
+          left: 299px;
+          > p {
+            width: 820px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1128px) {
+    .container-theme {
+      .content {
+        .theme-designing-title {
+          > p {
+            width: 632px;
+          }
+        }
+      }
+    }
+  }
 }

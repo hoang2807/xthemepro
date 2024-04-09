@@ -51,4 +51,56 @@
     top: 0;
     right: 0;
   }
+
+  @include small-desktop {
+    > .img {
+      scale: 0.6;
+      right: -188px;
+      top: 151px;
+    }
+  }
+  @include landscape-phone {
+    > .img {
+      // display: none;
+      scale: 0.4;
+      right: -287px;
+      top: 225px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    &-container {
+      padding-left: 46px;
+    }
+  }
+  @media screen and (max-width: 518px) {
+    &-container {
+      padding-left: 39px;
+    }
+  }
+  @media screen and (max-width: 508px) {
+    &-container {
+      padding-left: 11px;
+      width: 448px;
+    }
+    > .img {
+      scale: 0.3;
+      right: -335px;
+      top: 262px;
+    }
+  }
+  @media screen and (max-width: 454px) {
+    &-container {
+      width: 410px;
+    }
+  }
+  @media screen and (max-width: 424px) {
+    &-container {
+      width: 366px;
+    }
+  }
+  @media screen and (max-width: 366px) {
+    &-container {
+      width: 277px;
+    }
+  }
 }

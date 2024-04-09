@@ -123,7 +123,7 @@ header .header-container {
 }
 
 .overlay {
-  height: 100%;
+  height: 100vh;
   width: 0%;
   position: fixed;
   z-index: 2;
@@ -304,6 +304,10 @@ section {
 .btn-theme:hover {
   background-image: linear-gradient(to right, #103ce7, #64e9ff);
   border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
+}
+
+.split-child {
+  display: inline-block;
 }
 
 /** styling mobile nav **/
@@ -512,6 +516,40 @@ ul {
 @media screen and (max-width: 408px) {
   .about .about-left .about-design-text {
     width: 65%;
+  }
+}
+.reveal-about {
+  color: rgba(0, 0, 0, 0);
+  --g: no-repeat linear-gradient(#fff 0 0) 0 0;
+  background: var(--g), var(--g);
+  background-size: 0 100%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: t 2s 0.5s both, b 2s 1.3s both;
+}
+
+@keyframes t {
+  to {
+    background-size: 150% 100%;
+  }
+}
+@keyframes b {
+  to {
+    background-position: -350% 0, 0 0;
+  }
+}
+.about-text-left {
+  display: block;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 .web-design {
@@ -1196,6 +1234,28 @@ ul {
   text-transform: uppercase;
   letter-spacing: 6px;
 }
+@media screen and (max-width: 1362px) {
+  .theme-designing .theme-designing-list-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 1282px) {
+  .theme-designing .container-theme .content > h2 {
+    left: 237px;
+  }
+  .theme-designing .container-theme .content .theme-designing-title {
+    left: 299px;
+  }
+  .theme-designing .container-theme .content .theme-designing-title > p {
+    width: 820px;
+  }
+}
+@media screen and (max-width: 1128px) {
+  .theme-designing .container-theme .content .theme-designing-title > p {
+    width: 632px;
+  }
+}
 
 .theme-detail {
   width: 100%;
@@ -1391,6 +1451,19 @@ ul {
   right: -65px;
   cursor: pointer;
 }
+@media screen and (max-width: 1432px) {
+  .screenshot .arrow-prev {
+    left: -46px;
+  }
+  .screenshot .arrow-next {
+    right: 3px;
+  }
+}
+@media screen and (max-width: 1296px) {
+  .screenshot .screenshot-container-list {
+    width: 96%;
+  }
+}
 
 .mobile-first {
   background-color: #0c024c;
@@ -1452,6 +1525,56 @@ ul {
   position: absolute;
   top: 0;
   right: 0;
+}
+@media only screen and (max-width: 1023.98px) {
+  .mobile-first > .img {
+    scale: 0.6;
+    right: -188px;
+    top: 151px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .mobile-first > .img {
+    scale: 0.4;
+    right: -287px;
+    top: 225px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .mobile-first-container {
+    padding-left: 46px;
+  }
+}
+@media screen and (max-width: 518px) {
+  .mobile-first-container {
+    padding-left: 39px;
+  }
+}
+@media screen and (max-width: 508px) {
+  .mobile-first-container {
+    padding-left: 11px;
+    width: 448px;
+  }
+  .mobile-first > .img {
+    scale: 0.3;
+    right: -335px;
+    top: 262px;
+  }
+}
+@media screen and (max-width: 454px) {
+  .mobile-first-container {
+    width: 410px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .mobile-first-container {
+    width: 366px;
+  }
+}
+@media screen and (max-width: 366px) {
+  .mobile-first-container {
+    width: 277px;
+  }
 }
 
 .footer {

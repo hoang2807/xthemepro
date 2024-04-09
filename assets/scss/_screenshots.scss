@@ -51,4 +51,19 @@
       cursor: pointer;
     }
   }
+
+  @media screen and (max-width: 1432px) {
+    .arrow-prev {
+      left: -46px;
+    }
+    .arrow-next {
+      right: 3px;
+    }
+  }
+
+  @media screen and (max-width: 1296px) {
+    .screenshot-container-list {
+      width: 96%;
+    }
+  }
 }
