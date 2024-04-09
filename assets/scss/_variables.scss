@@ -11,6 +11,7 @@ $fw-eb: 800;
 $fw-bl: 900;
 
 $white: #fff;
+$black: #000;
 $text-dark: #001c43;
 $text-light: #bbbbf6;
 $text-blue: #749adb;
@@ -22,6 +23,20 @@ $blue: #0096ff;
 $purple: #98a9ec;
 $line: #133670;
 $border: #5f54a2;
+
+$color-black: hsl(0, 0%, 10%);
+$color-white: hsl(0, 0%, 95%);
+
+$gap: 0.5rem;
+$p-block: 1rem;
+$p-inline: 1.75rem;
+$border-radius: 0.75rem;
+
+// $fs: clamp(1rem, (1rem + 1.5vw), 3rem);
+$fs: 12px;
+
+$transition-duration: 0.45s;
+$transition-ease: cubic-bezier(0.32, 0, 0.67, 0);
 // START FUNCTION
 @mixin flex($j, $a, $g) {
   display: flex;
