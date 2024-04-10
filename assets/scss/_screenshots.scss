@@ -48,12 +48,14 @@
       top: 50%;
       left: -100px;
       cursor: pointer;
+      display: none;
     }
     .arrow-next {
       position: absolute;
       top: 50%;
       right: -65px;
       cursor: pointer;
+      display: none;
     }
   }
 
@@ -69,6 +71,11 @@
   @media screen and (max-width: 1296px) {
     .screenshot-container-list {
       width: 96%;
+    }
+  }
+  @media screen and (max-width: 679px) {
+    .screenshot-container-list {
+      padding-left: 10px;
     }
   }
 }

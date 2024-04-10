@@ -146,16 +146,133 @@
     }
   }
 
-  // @media screen and (max-width: 1094px) {
-  //   .container-theme {
-  //     .content {
-  //       > h2 {
-  //         left: 192px;
-  //       }
-  //       .theme-designing-title {
-  //         left: 256px;
-  //       }
-  //     }
-  //   }
-  // }
+  @media screen and (max-width: 1094px) {
+    .container-theme {
+      .content {
+        padding-bottom: 80px;
+        > h2 {
+          left: 13px;
+          top: 1px;
+          > span {
+            left: 57px;
+            top: -30px;
+          }
+        }
+        .theme-designing-title {
+          left: 77px;
+          top: -29px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 922px) {
+    .theme-designing-list {
+      .item {
+        width: 85%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container-theme {
+      .content {
+        > h2 {
+          scale: 0.7;
+          top: -24px;
+          left: -108px;
+        }
+        .theme-designing-title {
+          > span {
+            display: inline-block;
+            text-align: center;
+            > p {
+              max-width: 500px;
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 712px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: -22px;
+        }
+        .theme-designing-title {
+          max-width: 450px;
+          width: 100%;
+          top: -55px;
+          > p {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 594px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: -68px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 546px) {
+    .container-theme {
+      .content {
+        > h2 {
+          scale: 0.6;
+          left: -96px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 478px) {
+    .container-theme {
+      .content {
+        padding-bottom: 0px;
+        > h2 {
+          scale: 0.4;
+          left: -133px;
+          top: -55px;
+        }
+        .theme-designing-title {
+          left: 10px;
+          top: -122px;
+        }
+      }
+    }
+
+    .theme-designing-list {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 447px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: -70px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 329px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: -84px;
+        }
+      }
+    }
+  }
 }

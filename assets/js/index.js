@@ -118,10 +118,21 @@ $(document).ready(function () {
     nextArrow: $('.arrow-next'),
     responsive: [
       {
-        breakpoint: 1296,
+        breakpoint: 1311,
         settings: {
           arrows: false,
-          slidesToShow: 2
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false,
         }
       }
     ]
