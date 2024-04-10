@@ -17,16 +17,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-    /> -->
     <link rel="stylesheet" href="./assets/slick/slick.css" />
     <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -61,6 +54,13 @@
       </div>
     </header>
     <!-- Header -->
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
 
     <!-- <main> -->
     <main>
@@ -272,9 +272,9 @@
         <div class="software-left"></div>
         <div class="software-right"></div>
         <div class="content">
-          <span class="light">software</span>
-          <span class="dark">development</span>
-          <p class="">
+          <span class="light revealUp">software</span>
+          <span class="dark revealUp">development</span>
+          <p class="revealUp">
             Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
             wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
             nutzen, ist, dass es mehr oder weniger die normale Anordnung von er
@@ -283,9 +283,9 @@
           <img
             src="./assets/images/software/image.png"
             alt="image"
-            class="image"
+            class="image revealUp"
           />
-          <span class="service">services</span>
+          <span class="service revealUp">services</span>
         </div>
       </section>
       <!-- End Software Development -->
@@ -443,13 +443,10 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
     <script src="./assets/slick/slick.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
