@@ -140,7 +140,7 @@ $(document).ready(function () {
       trigger: elem,
       start: "top 70%",
       end: "bottom 20%",
-      markers: true,
+      // markers: true,
       onEnter: function () {
         gsap.fromTo(
           elem,

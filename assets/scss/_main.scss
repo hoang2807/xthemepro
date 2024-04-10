@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   font-family: $font-poppins;
@@ -52,12 +48,10 @@ section {
 
 .btn-theme {
   @include btn;
-  letter-spacing: 3px;
-  color: $white;
 }
 
 .btn-theme:hover {
-  background-image: linear-gradient(to right, #103ce7, #64e9ff);
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
   border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
 }
 

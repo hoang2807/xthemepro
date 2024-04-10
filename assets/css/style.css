@@ -246,10 +246,6 @@ header .header-container {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   font-family: "Poppins", sans-serif;
@@ -302,12 +298,10 @@ section {
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  letter-spacing: 3px;
-  color: #fff;
 }
 
 .btn-theme:hover {
-  background-image: linear-gradient(to right, #103ce7, #64e9ff);
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
   border-color: transparent; /* Tùy chọn: Nếu bạn muốn loại bỏ đường viền khi hover */
 }
 
