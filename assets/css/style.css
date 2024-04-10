@@ -22,6 +22,16 @@ header .header-container {
     max-width: 1000px;
   }
 }
+@media screen and (max-width: 1064px) {
+  header .header-container {
+    padding-inline: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .header-container img {
+    display: none;
+  }
+}
 
 .list-header {
   display: flex;
@@ -109,7 +119,7 @@ header .header-container {
   justify-content: flex-end;
   padding-left: 120px;
 }
-.home-wrapper .home-wrapperRight .btn-theme {
+.home-wrapper .home-wrapperRight .animate-button {
   margin-top: 22px;
 }
 .home-wrapper .line {
@@ -175,7 +185,7 @@ header .header-container {
     opacity: 1;
   }
 }
-@media screen and (max-width: 773px) {
+@media screen and (max-width: 774px) {
   .home-wrapper {
     flex-direction: column;
     align-items: center;
@@ -188,9 +198,7 @@ header .header-container {
     text-align: center;
   }
   .home-wrapper .line {
-    left: auto;
-    width: 300px !important;
-    transform: rotate(0);
+    display: none;
   }
   .home-wrapper .home-wrapperRight {
     padding-left: 0;
@@ -202,9 +210,6 @@ header .header-container {
   .home-wrapper {
     flex-direction: column;
     gap: 12px;
-  }
-  .home-wrapper .line {
-    display: none;
   }
   .home-wrapper .home-wrapperRight {
     width: 95%;
@@ -442,19 +447,26 @@ a {
 }
 
 .nav li a {
-  font-size: 50px;
+  font-size: 16px;
   line-height: 1.8;
   display: inline-block;
   color: white;
   opacity: 0;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   transition: all 0.3s ease;
   transform: translateY(-40px);
 }
+.nav li a > span {
+  font-size: 32px;
+  padding-left: 38px;
+}
 
-.nav li a:hover {
+.nav li a > span:hover {
   letter-spacing: 3px;
   transform: scale(1.08);
+  text-decoration: underline;
 }
 
 ul {
@@ -912,6 +924,31 @@ ul {
 .app-design .app-design-content .design__text {
   margin-top: 160px;
 }
+@media screen and (max-width: 844px) {
+  .app-design .app-design-content .app-design-container {
+    width: 520px;
+  }
+  .app-design .app-design-content .app {
+    scale: 0.5;
+  }
+  .app-design .app-design-content .design {
+    scale: 0.5;
+    left: 23px;
+    top: 2px;
+  }
+}
+@media screen and (max-width: 536px) {
+  .app-design .app-design-content .app {
+    position: relative;
+    left: -66px;
+  }
+  .app-design .app-design-content .design {
+    left: -43px;
+  }
+  .app-design .app-design-content .app-design-container .app-design-content__text {
+    align-items: start;
+  }
+}
 
 .software {
   display: flex;
@@ -1084,6 +1121,7 @@ ul {
   right: 0;
   left: 0;
   display: flex;
+  padding: 0 10px;
   justify-content: space-between;
   align-items: end;
 }
@@ -1101,6 +1139,29 @@ ul {
   position: relative;
   top: 90px;
   left: -195px;
+}
+@media screen and (max-width: 1040px) {
+  .theme_design .content .dark {
+    left: 53px;
+    top: -72px;
+  }
+  .theme_design .content .animate-button {
+    position: relative;
+    top: -122px;
+  }
+}
+@media screen and (max-width: 508px) {
+  .theme_design .content > div {
+    scale: 0.6;
+    position: relative;
+    left: -75px;
+    top: -157px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .theme_design .content > div {
+    left: -84px;
+  }
 }
 .theme_design .container-theme-slick {
   position: absolute;

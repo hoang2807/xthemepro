@@ -22,18 +22,25 @@
   margin: 0;
 }
 .nav li a {
-  font-size: 50px;
+  font-size: 16px;
   line-height: 1.8;
   display: inline-block;
   color: white;
   opacity: 0;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   transition: all 0.3s ease;
   transform: translateY(-40px);
+  > span {
+    font-size: 32px;
+    padding-left: 38px;
+  }
 }
-.nav li a:hover {
+.nav li a > span:hover {
   letter-spacing: 3px;
   transform: scale(1.08);
+  text-decoration: underline;
 }
 
 ul {

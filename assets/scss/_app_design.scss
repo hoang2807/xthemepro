@@ -71,5 +71,34 @@
         margin-top: 160px;
       }
     }
+
+    @media screen and (max-width: 844px) {
+      .app-design-container {
+        width: 520px;
+      }
+      .app {
+        scale: 0.5;
+      }
+      .design {
+        scale: 0.5;
+        left: 23px;
+        top: 2px;
+      }
+    }
+    @media screen and (max-width: 536px) {
+      .app {
+        position: relative;
+        left: -66px;
+      }
+      .design {
+        left: -43px;
+      }
+
+      .app-design-container {
+        .app-design-content__text {
+          align-items: start;
+        }
+      }
+    }
   }
 }

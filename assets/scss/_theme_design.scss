@@ -20,6 +20,7 @@
     right: 0;
     left: 0;
     display: flex;
+    padding: 0 10px;
     justify-content: space-between;
     align-items: end;
     .light {
@@ -31,6 +32,33 @@
       position: relative;
       top: 90px;
       left: -195px;
+    }
+
+    @media screen and (max-width: 1040px) {
+      .dark {
+        left: 53px;
+        top: -72px;
+      }
+
+      .animate-button {
+        position: relative;
+        top: -122px;
+      }
+    }
+
+    @media screen and (max-width: 508px) {
+      > div {
+        scale: 0.6;
+        position: relative;
+        left: -75px;
+        top: -157px;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      > div {
+        left: -84px;
+      }
     }
   }
   .container-theme-slick {

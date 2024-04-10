@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
+  const nav__link = document.querySelectorAll('.nav__link')
+  nav__link.forEach(element => {
+    element.addEventListener('click', function (e) {
+      tl.reversed(!tl.reversed());
+    })
+  })
+
   function animateOpenNav() {
     var mobileNav = document.getElementById("mb_nav");
     tl.to(mobileNav, {
@@ -138,7 +145,7 @@ $(document).ready(function () {
   gsap.utils.toArray(".revealUp").forEach(function (elem) {
     ScrollTrigger.create({
       trigger: elem,
-      start: "top 70%",
+      start: "top 65%",
       end: "bottom 20%",
       // markers: true,
       onEnter: function () {
