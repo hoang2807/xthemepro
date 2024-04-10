@@ -21,6 +21,10 @@
     margin: 0 auto;
     right: 0;
     left: 0;
+    .service {
+      position: absolute;
+      top: -46px;
+    }
     .light {
       font-size: 140px;
       line-height: 0.6;
@@ -148,6 +152,18 @@
         right: 0px;
         top: 160px;
       }
+    }
+  }
+
+  @include desktop {
+    .service {
+      left: 30px;
+    }
+  }
+
+  @include extra-mobile {
+    .service {
+      left: 21px;
     }
   }
 }

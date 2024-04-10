@@ -36,6 +36,11 @@
     .app-design-container {
       position: relative;
       width: 62%;
+      .service {
+        position: absolute;
+        left: 0;
+        top: 120px;
+      }
       .app-design-content__text {
         margin-top: 80px;
         display: flex;
@@ -75,6 +80,10 @@
     @media screen and (max-width: 844px) {
       .app-design-container {
         width: 520px;
+        .service {
+          top: 88px;
+          left: 67px;
+        }
       }
       .app {
         scale: 0.5;
@@ -95,6 +104,9 @@
       }
 
       .app-design-container {
+        .service {
+          left: 3px;
+        }
         .app-design-content__text {
           align-items: start;
         }

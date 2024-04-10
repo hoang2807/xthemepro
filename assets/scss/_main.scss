@@ -212,3 +212,11 @@ a {
     left: -132px;
   }
 }
+
+.service {
+  @include text-uppercase(12px, 400);
+  letter-spacing: 0.3em;
+  background-color: $blue;
+  border-radius: 3px;
+  padding: 4px 10px 4px 10px;
+}

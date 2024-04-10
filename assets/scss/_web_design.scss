@@ -49,6 +49,11 @@
         top: 0;
         left: 0;
       }
+      .service {
+        position: absolute;
+        top: 120px;
+        left: 22px;
+      }
     }
 
     .text {
@@ -99,6 +104,9 @@
         .design {
           left: 85px;
         }
+        .service {
+          left: -137px;
+        }
       }
     }
     .container-image {
@@ -143,12 +151,17 @@
           scale: 0.7;
           left: -27px;
         }
+        .service {
+          top: 103px;
+          left: -91px;
+        }
       }
     }
   }
 
   @media screen and (max-width: 695px) {
     .container-text {
+      padding-left: 3px;
       .text-image {
         .web {
           left: -226px;
@@ -156,6 +169,10 @@
 
         .design {
           left: -101px;
+        }
+        .service {
+          top: 100px;
+          left: -169px;
         }
       }
     }
@@ -172,6 +189,10 @@
           scale: 0.5;
           left: -135px;
           top: 1px;
+        }
+        .service {
+          top: 89px;
+          left: -99px;
         }
       }
       .text {

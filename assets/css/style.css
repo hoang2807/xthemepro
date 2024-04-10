@@ -457,6 +457,16 @@ a {
     left: -132px;
   }
 }
+.service {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  background-color: #0096ff;
+  border-radius: 3px;
+  padding: 4px 10px 4px 10px;
+}
+
 /** styling mobile nav **/
 .nav {
   z-index: 5;
@@ -782,6 +792,11 @@ a {
   top: 0;
   left: 0;
 }
+.web-design .container-text .text-image .service {
+  position: absolute;
+  top: 120px;
+  left: 22px;
+}
 .web-design .container-text .text {
   text-align: end;
   margin-top: 150px;
@@ -822,6 +837,9 @@ a {
   .web-design .container-text .text-image .design {
     left: 85px;
   }
+  .web-design .container-text .text-image .service {
+    left: -137px;
+  }
   .web-design .container-image .plan {
     scale: 0.7;
     bottom: 20px;
@@ -857,13 +875,24 @@ a {
     scale: 0.7;
     left: -27px;
   }
+  .web-design .container-text .text-image .service {
+    top: 103px;
+    left: -91px;
+  }
 }
 @media screen and (max-width: 695px) {
+  .web-design .container-text {
+    padding-left: 3px;
+  }
   .web-design .container-text .text-image .web {
     left: -226px;
   }
   .web-design .container-text .text-image .design {
     left: -101px;
+  }
+  .web-design .container-text .text-image .service {
+    top: 100px;
+    left: -169px;
   }
 }
 @media screen and (max-width: 616px) {
@@ -875,6 +904,10 @@ a {
     scale: 0.5;
     left: -135px;
     top: 1px;
+  }
+  .web-design .container-text .text-image .service {
+    top: 89px;
+    left: -99px;
   }
   .web-design .container-text .text {
     margin-top: 107px;
@@ -938,6 +971,11 @@ a {
   position: relative;
   width: 62%;
 }
+.app-design .app-design-content .app-design-container .service {
+  position: absolute;
+  left: 0;
+  top: 120px;
+}
 .app-design .app-design-content .app-design-container .app-design-content__text {
   margin-top: 80px;
   display: flex;
@@ -976,6 +1014,10 @@ a {
   .app-design .app-design-content .app-design-container {
     width: 520px;
   }
+  .app-design .app-design-content .app-design-container .service {
+    top: 88px;
+    left: 67px;
+  }
   .app-design .app-design-content .app {
     scale: 0.5;
   }
@@ -992,6 +1034,9 @@ a {
   }
   .app-design .app-design-content .design {
     left: -43px;
+  }
+  .app-design .app-design-content .app-design-container .service {
+    left: 3px;
   }
   .app-design .app-design-content .app-design-container .app-design-content__text {
     align-items: start;
@@ -1021,6 +1066,10 @@ a {
   margin: 0 auto;
   right: 0;
   left: 0;
+}
+.software .content .service {
+  position: absolute;
+  top: -46px;
 }
 .software .content .light {
   font-size: 140px;
@@ -1143,6 +1192,16 @@ a {
     scale: 0.5;
     right: 0px;
     top: 160px;
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  .software .service {
+    left: 30px;
+  }
+}
+@media only screen and (max-width: 576.98px) {
+  .software .service {
+    left: 21px;
   }
 }
 
