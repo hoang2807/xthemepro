@@ -402,7 +402,7 @@ a {
   font-size: 12px;
   transition: transform 0.45s cubic-bezier(0.32, 0, 0.67, 0);
   line-height: 1;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   letter-spacing: 0.5em;
 }
 .animate-button .overlay {
