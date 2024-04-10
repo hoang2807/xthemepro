@@ -122,3 +122,60 @@
     }
   }
 }
+
+@media screen and (max-width: 1633px) {
+  .theme_design {
+    .container-theme-slick {
+      left: 318px;
+      .next {
+        left: 749px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .theme_design {
+    .container-theme-slick {
+      left: 179px;
+    }
+  }
+}
+
+@media screen and (max-width: 974px) {
+  .theme_design {
+    .container-theme-slick {
+      .next {
+        left: 360px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 958px) {
+  .theme_design {
+    .content {
+      .animate-button {
+        top: -332px;
+        left: -337px;
+        width: 400px;
+        .text {
+          display: flex;
+          gap: 2.5px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .theme_design {
+    .content {
+      .animate-button {
+        width: 480px;
+        height: 60px;
+      }
+    }
+  }
+}

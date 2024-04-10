@@ -66,20 +66,31 @@ $(document).ready(function () {
     nextArrow: $('.next'),
     dots: true,
     responsive: [
+      // {
+      //   breakpoint: 1633,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 1,
+      //   }
+      // },
       {
-        breakpoint: 1025,
+        breakpoint: 1120,
         settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
+          infinite: true,
           arrows: false,
-          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
+      // {
+      //   breakpoint: 480,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //     arrows: false,
+      //     infinite: false,
+      //   },
+      // },
     ],
     // autoplay: true,
     // autoplaySpeed: 1000,
@@ -144,20 +155,6 @@ $(document).ready(function () {
       }
     ]
   })
-
-  //   let sections = gsap.utils.toArray("section");
-  // let listItem = gsap.utils.toArray("li");
-
-  // sections.forEach((section, index) => {
-  //   ScrollTrigger.create({
-  //     trigger: section,
-  //     markers: true,
-  //     start: 'top bottom',
-  //     end: 'bottom bottom',
-  //     toggleClass: { targets: listItem[index], className: "active" }
-  //   });
-  // });
-
 
   // reveal up
   gsap.utils.toArray(".revealUp").forEach(function (elem) {
@@ -241,28 +238,6 @@ function hideTiles() {
     delay: 1
   })
 }
-
-// (function ($) {
-
-//   let openPopup = $(".list-header-itemRight");
-//   let closePopup = $(".popup-close");
-//   let popup = $(".popup");
-
-//   openPopup.click(function (e) {
-//     e.preventDefault();
-//     popup.addClass("popup--open");
-//     showTiles();
-//   });
-
-//   closePopup.click(function () {
-//     setTimeout(function () {
-//       popup.removeClass("popup--open");
-//     }, 1000);
-//     hideTiles();
-//   });
-
-
-// })(jQuery);
 
 $('.btn-theme').click(function () {
   myFunction(this);
