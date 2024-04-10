@@ -439,13 +439,11 @@ a {
   align-items: center;
   transform: translateY(-100%);
 }
-
 .nav li {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 .nav li a {
   font-size: 16px;
   line-height: 1.8;
@@ -462,18 +460,33 @@ a {
   font-size: 32px;
   padding-left: 38px;
 }
-
 .nav li a > span:hover {
   letter-spacing: 3px;
-  transform: scale(1.08);
+  transform: scale(1.2);
   text-decoration: underline;
 }
-
-ul {
+.nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 160px;
   row-gap: 30px;
+}
+@media screen and (max-width: 1288px) {
+  .nav ul {
+    padding-inline: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav ul {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .nav li a > span {
+    font-size: 24px;
+    padding-left: 15px;
+  }
 }
 
 .about {
