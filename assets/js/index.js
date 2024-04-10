@@ -4,6 +4,7 @@ const li = document.querySelectorAll('.overlay-container li')
 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger)
+
   var tl = gsap.timeline({ paused: true });
 
   function openNav() {
@@ -44,8 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // init
   openNav();
+
 });
 
+window.addEventListener("scroll", function () {
+
+  const maxHeight = document.body.scrollHeight - window.innerHeight;
+  console.log((window.scrollY * 100) / maxHeight);
+});
 
 $(document).ready(function () {
   $(".theme-list").slick({
@@ -266,3 +273,59 @@ function myFunction(element) {
   console.log(element.id);
   console.log($(element).attr("class"));
 }
+
+// $(document).scroll(function () {
+//   $('section').each(function () {
+//     if ($(this).position().top <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
+//       console.log($(this).attr('id'));
+//     }
+//   });
+// });
+(function ($) {
+  $(window).on("scroll", function () {
+    //Loop Sections
+    $("section").each(function (i, d) {
+      //And Get Current One
+
+      var sec = $(this);
+      // var el = $(this).find('#name-page');
+      const el = document.getElementById('name-page')
+      const current = document.getElementById('current-page')
+
+      // el.text('test')
+      if (
+        $(this).position().top - 100 <= $(document).scrollTop() &&
+        $(this).position().top - 100 + $(this).outerHeight() > $(document).scrollTop()
+      ) {
+        console.log('<p>In The Viewport: ' + i + '</p>')
+        current.innerHTML = `0${i + 1}`
+        switch (i) {
+          case 0:
+            el.innerHTML = 'intro'
+            break
+          case 1:
+            el.innerHTML = 'about'
+            break
+          case 2:
+            el.innerHTML = 'web design'
+            break
+          case 3:
+            el.innerHTML = 'app design'
+            break
+          case 4:
+            el.innerHTML = 'software development'
+            break
+          case 5:
+            el.innerHTML = 'themes design'
+            break
+          case 6:
+            el.innerHTML = 'contact'
+            break
+        }
+      } else {
+        // console.log('<p>Out Of The Viewport: ' + i + '</p>')
+      }
+    });
+  });
+})(jQuery);
+
