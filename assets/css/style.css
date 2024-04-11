@@ -295,6 +295,7 @@ header .header-container {
 
 html {
   overflow: scroll;
+  scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar {
@@ -414,6 +415,11 @@ ul.transition li {
 
 a {
   text-decoration: none;
+}
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .animate-button {
@@ -989,6 +995,15 @@ a {
     color: white;
   }
 }
+@media screen and (max-width: 357px) {
+  .web-design .container-image .plan {
+    bottom: -44px;
+    left: -39px;
+  }
+  .web-design .container-image .book {
+    display: none;
+  }
+}
 
 .app-design {
   display: flex;
@@ -1498,6 +1513,11 @@ a {
   }
   .theme_design .container-theme-slick {
     left: 10px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .theme-design .container-theme-slick .theme-list .list-item {
+    margin-right: 32px;
   }
 }
 @media screen and (max-width: 402px) {

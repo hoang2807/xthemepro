@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function animateOpenNav() {
     var mobileNav = document.getElementById("mb_nav");
     tl.to(mobileNav, {
-      duration: 0.8,
+      duration: 0.4,
       ease: "power3.out",
       y: 0
     }).to(".nav__link", {
@@ -167,46 +167,46 @@ $(document).ready(function () {
   })
 
   // reveal up
-  // gsap.utils.toArray(".revealUp").forEach(function (elem) {
-  //   ScrollTrigger.create({
-  //     trigger: elem,
-  //     start: "top 65%",
-  //     end: "bottom 20%",
-  //     // markers: true,
-  //     onEnter: function () {
-  //       gsap.fromTo(
-  //         elem,
-  //         { y: 100, autoAlpha: 0 },
-  //         {
-  //           duration: 1.25,
-  //           y: 0,
-  //           autoAlpha: 1,
-  //           ease: "back",
-  //           overwrite: "auto"
-  //         }
-  //       );
-  //     },
-  //     onLeave: function () {
-  //       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-  //     },
-  //     onEnterBack: function () {
-  //       gsap.fromTo(
-  //         elem,
-  //         { y: -100, autoAlpha: 0 },
-  //         {
-  //           duration: 1.25,
-  //           y: 0,
-  //           autoAlpha: 1,
-  //           ease: "back",
-  //           overwrite: "auto"
-  //         }
-  //       );
-  //     },
-  //     onLeaveBack: function () {
-  //       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-  //     }
-  //   });
-  // });
+  gsap.utils.toArray(".revealUp").forEach(function (elem) {
+    ScrollTrigger.create({
+      trigger: elem,
+      start: "top 65%",
+      end: "bottom 20%",
+      // markers: true,
+      onEnter: function () {
+        gsap.fromTo(
+          elem,
+          { y: 100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto"
+          }
+        );
+      },
+      onLeave: function () {
+        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+      },
+      onEnterBack: function () {
+        gsap.fromTo(
+          elem,
+          { y: -100, autoAlpha: 0 },
+          {
+            duration: 1.25,
+            y: 0,
+            autoAlpha: 1,
+            ease: "back",
+            overwrite: "auto"
+          }
+        );
+      },
+      onLeaveBack: function () {
+        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+      }
+    });
+  });
 
 });
 
@@ -301,3 +301,51 @@ $('.btn-theme').click(function () {
   });
 })(jQuery);
 
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; }
+  }));
+} catch (e) { }
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+disableScroll()
+
+$(document).ready(function () {
+  setTimeout(function () {
+    $('body').addClass('loaded');
+    $('h1').css('color', '#222222');
+    enableScroll()
+  }, 3000);
+});

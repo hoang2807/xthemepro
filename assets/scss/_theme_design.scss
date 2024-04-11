@@ -243,6 +243,18 @@
   }
 }
 
+@media screen and (max-width: 413px) {
+  .theme-design {
+    .container-theme-slick {
+      .theme-list {
+        .list-item {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 402px) {
   .theme_design {
     .container-theme-slick {
