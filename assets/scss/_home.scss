@@ -90,8 +90,11 @@ header {
   display: flex;
   .home-wrapperLeft {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
     width: 50%;
+    gap: 39px;
     .text-1 {
       font-size: 21px;
       text-align: center;
@@ -124,19 +127,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-left: 120px;
+    padding-left: 80px;
+    position: relative;
+    top: 60px;
     .animate-button {
       margin-top: 22px;
     }
   }
   .line {
-    width: 122px;
-    height: 0px;
-    transform: rotate(90deg);
+    // width: 122px;
+    height: 122px;
+    // transform: rotate(90deg);
     border: 1px solid #fff;
-    position: absolute;
-    top: 406px;
-    left: 50%;
+    // position: absolute;
+    // top: 410px;
+    // left: 50%;
   }
 }
 
@@ -201,69 +206,189 @@ header {
 //   }
 // }
 
+@media screen and (max-width: 1346px) {
+  .home-wrapper {
+    flex-direction: column;
+    align-items: center;
+    .line {
+      display: none;
+    }
+    .home-wrapperRight {
+      width: 550px;
+    }
+  }
+}
+
+@media screen and (max-width: 1048px) {
+  .home-wrapper {
+    padding-inline: 15px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .home-wrapper {
+    align-items: end;
+  }
+}
+
 @media screen and (max-width: 774px) {
   .home-wrapper {
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
     .home-wrapperLeft {
       width: 100%;
       .text-3 {
         text-align: center;
       }
     }
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    .line {
-      display: none;
-    }
+    // .line {
+    //   display: none;
+    // }
     .home-wrapperRight {
       padding-left: 0;
-      width: 60%;
-      padding-top: 12px;
+      // width: 60%;
+      padding-top: 7px;
       position: relative;
       top: 90px;
     }
   }
 }
 
-@include mobile {
+@media screen and (max-width: 731px) {
   .home-wrapper {
-    flex-direction: column;
-    gap: 12px;
+    .home-wrapperLeft {
+      img {
+        scale: 0.6;
+      }
+    }
     .home-wrapperRight {
-      width: 95%;
-      padding-top: 8px;
+      padding-top: 0;
     }
   }
 }
 
-@include small-mobile {
+@media screen and (max-width: 587px) {
   .home-wrapper {
-    padding-top: 25%;
-    width: 95%;
-    gap: 0;
-    .line {
-      display: none;
-    }
+    width: 90%;
     .home-wrapperLeft {
-      gap: 8px;
-      .text-2 {
-        font-size: 80px;
-        > .real {
-          font-size: 110px;
-          line-height: 0.4;
-        }
-      }
-      .text-3 {
-        font-size: 20px;
-        > {
-          span {
-            font-size: 28px;
-          }
-        }
+      img {
+        position: relative;
+        left: 60px;
       }
     }
     .home-wrapperRight {
-      padding-top: 4px;
+      padding-inline: 15px;
+      width: 450px;
     }
   }
 }
+
+@media screen and (max-width: 487px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        left: 103px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        left: 145px;
+      }
+    }
+    .home-wrapperRight {
+      width: 370px;
+    }
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        scale: 0.5;
+        left: 149px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        left: 169px;
+        top: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 345px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        left: 185px;
+        top: 120px;
+      }
+    }
+    .home-wrapperRight {
+      width: 294px;
+    }
+  }
+}
+@media screen and (max-width: 321px) {
+  .home-wrapper {
+    .home-wrapperLeft {
+      img {
+        scale: 0.4;
+      }
+    }
+  }
+}
+// @include mobile {
+//   .home-wrapper {
+//     flex-direction: column;
+//     // gap: 12px;
+//     .home-wrapperRight {
+//       width: 95%;
+//       padding-top: 8px;
+//     }
+//   }
+// }
+
+// @include small-mobile {
+//   .home-wrapper {
+//     padding-top: 25%;
+//     width: 95%;
+//     gap: 0;
+//     .line {
+//       display: none;
+//     }
+//     .home-wrapperLeft {
+//       gap: 8px;
+//       .text-2 {
+//         font-size: 80px;
+//         > .real {
+//           font-size: 110px;
+//           line-height: 0.4;
+//         }
+//       }
+//       .text-3 {
+//         font-size: 20px;
+//         > {
+//           span {
+//             font-size: 28px;
+//           }
+//         }
+//       }
+//     }
+//     .home-wrapperRight {
+//       padding-top: 4px;
+//     }
+//   }
+// }
