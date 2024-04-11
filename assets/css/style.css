@@ -518,6 +518,62 @@ a {
   padding: 4px 10px 4px 10px;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.counter {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  display: flex;
+  gap: 4px;
+  height: 100px;
+  font-size: 102px;
+  line-height: 102px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+  font-weight: 400;
+  font-family: "Disket";
+}
+
+.counter-1,
+.counter-2,
+.counter-3 {
+  position: relative;
+}
+
+.num1offset1 {
+  position: relative;
+}
+
+.num1offset2 {
+  position: relative;
+  right: -10px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  background: rgb(80, 80, 80);
+}
+.loader-bar {
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+}
+
 /** styling mobile nav **/
 .nav {
   z-index: 5;
