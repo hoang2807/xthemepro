@@ -41,8 +41,8 @@
       }
 
       .animate-button {
-        position: relative;
-        top: -122px;
+        // position: relative;
+        // top: -122px;
       }
     }
 
@@ -142,6 +142,27 @@
   }
 }
 
+@media screen and (max-width: 1064px) {
+  .theme_design {
+    .content {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  .theme_design {
+    .content {
+      top: 119px;
+      .dark {
+        top: 103px;
+        left: -193px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 974px) {
   .theme_design {
     .container-theme-slick {
@@ -152,30 +173,98 @@
   }
 }
 
-@media screen and (max-width: 958px) {
+@media screen and (max-width: 832px) {
   .theme_design {
     .content {
-      .animate-button {
-        top: -332px;
-        left: -337px;
-        width: 400px;
-        .text {
-          display: flex;
-          gap: 2.5px;
-          justify-content: center;
-        }
+      .dark {
+        top: -73px;
+        left: 169px;
       }
     }
   }
 }
 
-@media screen and (max-width: 682px) {
+@media screen and (max-width: 628px) {
   .theme_design {
     .content {
-      .animate-button {
-        width: 480px;
-        height: 60px;
+      gap: 25px;
+      .light {
+        font-size: 60px;
       }
+      .dark {
+        font-size: 60px;
+        top: 53px;
+        left: -129px;
+      }
+    }
+    .container-theme-slick {
+      top: 444px;
+    }
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .theme_design {
+    .container-theme-slick {
+      left: 78px;
+    }
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .theme_design {
+    .content {
+      height: 300px;
+      gap: 0;
+      > div {
+        height: 300px;
+      }
+      .light {
+        position: relative;
+        top: 200px;
+      }
+      .dark {
+        top: 253px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .theme_design {
+    .content {
+      > div {
+        width: 500px;
+      }
+    }
+    .container-theme-slick {
+      left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 402px) {
+  .theme_design {
+    .container-theme-slick {
+      .theme-list {
+        .list-item {
+          scale: 0.8;
+        }
+      }
+      .prev {
+        left: 17px;
+      }
+      .next {
+        left: 310px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .theme-design {
+    .container-theme-slick {
+      left: -10px;
     }
   }
 }

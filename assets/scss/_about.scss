@@ -174,11 +174,28 @@
 @media screen and (max-width: 408px) {
   .about {
     .about-left {
-      // .app {
-
-      // }
+      .container-about-left {
+        .about-text-left {
+          left: -19px;
+        }
+      }
       .about-design-text {
         width: 65%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .about {
+    .about-left {
+      .container-about-left {
+        .app {
+          scale: 0.6;
+        }
+        .design {
+          scale: 0.6;
+        }
       }
     }
   }

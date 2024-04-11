@@ -124,10 +124,10 @@ a {
   text-decoration: none;
 }
 
-.revealUp {
-  opacity: 0;
-  visibility: hidden;
-}
+// .revealUp {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 
 .animate-button {
   width: 228px;
@@ -192,8 +192,8 @@ a {
 .current-page {
   min-width: 380px;
   position: fixed;
-  bottom: 253px;
-  left: -45px;
+  bottom: 249px;
+  left: -130px;
   z-index: 5;
   transform: rotate(-90deg);
   display: flex;

@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-window.addEventListener("scroll", function () {
+// window.addEventListener("scroll", function () {
 
-  const maxHeight = document.body.scrollHeight - window.innerHeight;
-  console.log((window.scrollY * 100) / maxHeight);
-});
+//   const maxHeight = document.body.scrollHeight - window.innerHeight;
+//   console.log((window.scrollY * 100) / maxHeight);
+// });
 
 $(document).ready(function () {
   $(".theme-list").slick({
@@ -82,6 +82,16 @@ $(document).ready(function () {
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 484,
+        settings: {
+          infinite: true,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // variableWidth: false,
+        }
+      }
       // {
       //   breakpoint: 480,
       //   settings: {
@@ -157,46 +167,46 @@ $(document).ready(function () {
   })
 
   // reveal up
-  gsap.utils.toArray(".revealUp").forEach(function (elem) {
-    ScrollTrigger.create({
-      trigger: elem,
-      start: "top 65%",
-      end: "bottom 20%",
-      // markers: true,
-      onEnter: function () {
-        gsap.fromTo(
-          elem,
-          { y: 100, autoAlpha: 0 },
-          {
-            duration: 1.25,
-            y: 0,
-            autoAlpha: 1,
-            ease: "back",
-            overwrite: "auto"
-          }
-        );
-      },
-      onLeave: function () {
-        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-      },
-      onEnterBack: function () {
-        gsap.fromTo(
-          elem,
-          { y: -100, autoAlpha: 0 },
-          {
-            duration: 1.25,
-            y: 0,
-            autoAlpha: 1,
-            ease: "back",
-            overwrite: "auto"
-          }
-        );
-      },
-      onLeaveBack: function () {
-        gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-      }
-    });
-  });
+  // gsap.utils.toArray(".revealUp").forEach(function (elem) {
+  //   ScrollTrigger.create({
+  //     trigger: elem,
+  //     start: "top 65%",
+  //     end: "bottom 20%",
+  //     // markers: true,
+  //     onEnter: function () {
+  //       gsap.fromTo(
+  //         elem,
+  //         { y: 100, autoAlpha: 0 },
+  //         {
+  //           duration: 1.25,
+  //           y: 0,
+  //           autoAlpha: 1,
+  //           ease: "back",
+  //           overwrite: "auto"
+  //         }
+  //       );
+  //     },
+  //     onLeave: function () {
+  //       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+  //     },
+  //     onEnterBack: function () {
+  //       gsap.fromTo(
+  //         elem,
+  //         { y: -100, autoAlpha: 0 },
+  //         {
+  //           duration: 1.25,
+  //           y: 0,
+  //           autoAlpha: 1,
+  //           ease: "back",
+  //           overwrite: "auto"
+  //         }
+  //       );
+  //     },
+  //     onLeaveBack: function () {
+  //       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+  //     }
+  //   });
+  // });
 
 });
 
@@ -243,36 +253,23 @@ $('.btn-theme').click(function () {
   myFunction(this);
 });
 
-function myFunction(element) {
-  console.log(element);
-  console.log(element.id);
-  console.log($(element).attr("class"));
-}
+// function myFunction(element) {
+//   console.log(element);
+//   console.log(element.id);
+//   console.log($(element).attr("class"));
+// }
 
-// $(document).scroll(function () {
-//   $('section').each(function () {
-//     if ($(this).position().top <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
-//       console.log($(this).attr('id'));
-//     }
-//   });
-// });
 (function ($) {
   $(window).on("scroll", function () {
     //Loop Sections
     $("section").each(function (i, d) {
-      //And Get Current One
-
-      var sec = $(this);
-      // var el = $(this).find('#name-page');
       const el = document.getElementById('name-page')
       const current = document.getElementById('current-page')
 
-      // el.text('test')
       if (
         $(this).position().top - 100 <= $(document).scrollTop() &&
         $(this).position().top - 100 + $(this).outerHeight() > $(document).scrollTop()
       ) {
-        console.log('<p>In The Viewport: ' + i + '</p>')
         current.innerHTML = `0${i + 1}`
         switch (i) {
           case 0:
