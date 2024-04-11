@@ -262,6 +262,22 @@
         > h2 {
           left: -70px;
         }
+        .theme-designing-title {
+          padding-inline: 15px;
+        }
+        .animate-button {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 338px) {
+    .container-theme {
+      .content {
+        > h2 {
+          left: -87px;
+        }
       }
     }
   }
@@ -271,6 +287,26 @@
       .content {
         > h2 {
           left: -84px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 314px) {
+    .container-theme {
+      .content {
+        > h2 {
+          scale: 0.3;
+        }
+      }
+    }
+
+    .theme-designing-list {
+      #show-more {
+        gap: 10px;
+        > span {
+          letter-spacing: 3px;
+          font-size: 8px;
         }
       }
     }

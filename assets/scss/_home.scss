@@ -96,6 +96,7 @@ header {
       font-size: 21px;
       text-align: center;
       text-transform: uppercase;
+      padding-right: 34px;
     }
     .text-2 {
       @include text-transparent;
@@ -134,7 +135,7 @@ header {
     transform: rotate(90deg);
     border: 1px solid #fff;
     position: absolute;
-    top: 70%;
+    top: 406px;
     left: 50%;
   }
 }
@@ -218,6 +219,8 @@ header {
       padding-left: 0;
       width: 60%;
       padding-top: 12px;
+      position: relative;
+      top: 90px;
     }
   }
 }

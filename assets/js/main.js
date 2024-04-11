@@ -1,22 +1,50 @@
-/* 
- _____   _           _         _                        _                  
-|_   _| | |         | |       | |                      | |                 
-  | |   | |__   __ _| |_ ___  | |_ ___  _ __ ___   __ _| |_ ___   ___  ___ 
-  | |   | '_ \ / _` | __/ _ \ | __/ _ \| '_ ` _ \ / _` | __/ _ \ / _ \/ __|
- _| |_  | | | | (_| | ||  __/ | || (_) | | | | | | (_| | || (_) |  __/\__ \
- \___/  |_| |_|\__,_|\__\___|  \__\___/|_| |_| |_|\__,_|\__\___/ \___||___/
+// // left: 37, up: 38, right: 39, down: 40,
+// // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+// var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-Oh nice, welcome to the js file of dreams.
-Enjoy responsibly!
-@ihatetomatoes
+// function preventDefault(e) {
+// 	e.preventDefault();
+// }
 
-*/
+// function preventDefaultForScrollKeys(e) {
+// 	if (keys[e.keyCode]) {
+// 		preventDefault(e);
+// 		return false;
+// 	}
+// }
 
-$(document).ready(function() {
-	
-	setTimeout(function(){
-		$('body').addClass('loaded');
-		$('h1').css('color','#222222');
-	}, 3000);
-	
-});
+// // modern Chrome requires { passive: false } when adding event
+// var supportsPassive = false;
+// try {
+// 	window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+// 		get: function () { supportsPassive = true; }
+// 	}));
+// } catch (e) { }
+
+// var wheelOpt = supportsPassive ? { passive: false } : false;
+// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// // call this to Disable
+// function disableScroll() {
+// 	window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+// 	window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+// 	window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+// 	window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
+
+// function enableScroll() {
+// 	window.removeEventListener('DOMMouseScroll', preventDefault, false);
+// 	window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+// 	window.removeEventListener('touchmove', preventDefault, wheelOpt);
+// 	window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
+
+// disableScroll()
+
+// $(document).ready(function () {
+// 	setTimeout(function () {
+// 		$('body').addClass('loaded');
+// 		$('h1').css('color', '#222222');
+// 		enableScroll()
+// 	}, 3000);
+// });

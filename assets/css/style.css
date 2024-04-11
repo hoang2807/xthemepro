@@ -89,6 +89,7 @@ header .header-container {
   font-size: 21px;
   text-align: center;
   text-transform: uppercase;
+  padding-right: 34px;
 }
 .home-wrapper .home-wrapperLeft .text-2 {
   color: transparent;
@@ -128,7 +129,7 @@ header .header-container {
   transform: rotate(90deg);
   border: 1px solid #fff;
   position: absolute;
-  top: 70%;
+  top: 406px;
   left: 50%;
 }
 
@@ -204,6 +205,8 @@ header .header-container {
     padding-left: 0;
     width: 60%;
     padding-top: 12px;
+    position: relative;
+    top: 90px;
   }
 }
 @media only screen and (max-width: 480.98px) {
@@ -1704,10 +1707,33 @@ a {
   .theme-designing .container-theme .content > h2 {
     left: -70px;
   }
+  .theme-designing .container-theme .content .theme-designing-title {
+    padding-inline: 15px;
+  }
+  .theme-designing .container-theme .content .animate-button {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 338px) {
+  .theme-designing .container-theme .content > h2 {
+    left: -87px;
+  }
 }
 @media screen and (max-width: 329px) {
   .theme-designing .container-theme .content > h2 {
     left: -84px;
+  }
+}
+@media screen and (max-width: 314px) {
+  .theme-designing .container-theme .content > h2 {
+    scale: 0.3;
+  }
+  .theme-designing .theme-designing-list #show-more {
+    gap: 10px;
+  }
+  .theme-designing .theme-designing-list #show-more > span {
+    letter-spacing: 3px;
+    font-size: 8px;
   }
 }
 
