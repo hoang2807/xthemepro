@@ -94,7 +94,7 @@
 
       <div class="container-contact">
         <span class="price">$219.00</span>
-        <span class="btn-contact">Contact to Buy this theme</span>
+        <a href="#" class="btn-contact">Contact to Buy this theme</a>
         <p>
           Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
           wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu
@@ -131,7 +131,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="./assets/icons/design.svg" alt="design" />
+          <img src="./assets/icons/icon-design.svg" alt="design" />
           <div class="text">
             <span class="title">design</span>
             <span class="content">Figma, Adobe Photoshop, Illustrator</span>
@@ -159,24 +159,115 @@
         </p>
 
         <div class="screenshot-container-list">
-          <img src="./assets/images/screenshots/img1.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img2.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img3.png" alt="" class="immg" />
-          <img src="./assets/images/screenshots/img4.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img5.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img6.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img1.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img2.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img3.png" alt="" class="img" />
-          <img src="./assets/images/screenshots/img4.png" alt="" />
-          <img src="./assets/images/screenshots/img5.png" alt="" />
-          <img src="./assets/images/screenshots/img6.png" alt="" />
-          <img src="./assets/images/screenshots/img1.png" alt="" />
-          <img src="./assets/images/screenshots/img2.png" alt="" />
-          <img src="./assets/images/screenshots/img3.png" alt="" />
-          <img src="./assets/images/screenshots/img4.png" alt="" />
-          <img src="./assets/images/screenshots/img5.png" alt="" />
-          <img src="./assets/images/screenshots/img6.png" alt="" />
+          <img
+            src="./assets/images/screenshots/img1.png"
+            alt=""
+            class="img"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          />
+          <img
+            src="./assets/images/screenshots/img2.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img3.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img4.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img5.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img6.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img1.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img2.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img3.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img4.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img5.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img6.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img1.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img2.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img3.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img4.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img5.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
+          <img
+            src="./assets/images/screenshots/img6.png"
+            alt=""
+            class="img"
+            onclick="showImageModal(this)"
+          />
         </div>
         <img src="./assets/icons/prevArrowDark.svg" alt="" class="arrow-prev" />
         <img src="./assets/icons/nextArrow.svg" alt="" class="arrow-next" />
@@ -231,10 +322,48 @@
           @2024 Copyright of FHM Vietnam., inc. All Right Reserved.
         </span>
         <div class="social-icon">
-          <img src="./assets/icons/tiktok.svg" alt="tiktok" />
-          <img src="./assets/icons/youtube.svg" alt="youtube" />
-          <img src="./assets/icons/x.svg" alt="x" />
-          <img src="./assets/icons/facebook.svg" alt="facebook" />
+          <a href="#"> <img src="./assets/icons/tiktok.svg" alt="tiktok" /></a>
+          <a href="#">
+            <img src="./assets/icons/youtube.svg" alt="youtube"
+          /></a>
+          <a href="#"> <img src="./assets/icons/x.svg" alt="x" /></a>
+          <a href="#">
+            <img src="./assets/icons/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
@@ -247,9 +376,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
     <script src="./assets/slick/slick.min.js"></script>
-
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/theme-detail.js"></script>
   </body>
 </html>

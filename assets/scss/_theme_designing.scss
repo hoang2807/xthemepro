@@ -71,7 +71,7 @@
       gap: 30px;
     }
     .item {
-      display: flex;
+      display: none;
       flex-direction: column;
       width: 431px;
       > img {
@@ -85,6 +85,7 @@
       > .title {
         @include text-uppercase(16px, 400);
         padding-top: 5px;
+        color: white;
       }
       > .price {
         @include text-uppercase(16px, 700);

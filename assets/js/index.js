@@ -106,66 +106,6 @@ $(document).ready(function () {
     // autoplaySpeed: 1000,
   });
 
-  $('.theme-detail-slider').slick({
-    centerMode: true,
-    infinite: true,
-    centerPadding: '120px',
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    arrows: false,
-    // variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-
-  $('.screenshot-container-list').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    rows: 3,
-    variableWidth: true,
-    prevArrow: $('.arrow-prev'),
-    nextArrow: $('.arrow-next'),
-    responsive: [
-      {
-        breakpoint: 1311,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: false,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          variableWidth: false,
-        }
-      }
-    ]
-  })
-
   // reveal up
   gsap.utils.toArray(".revealUp").forEach(function (elem) {
     ScrollTrigger.create({
@@ -252,12 +192,6 @@ function hideTiles() {
 $('.btn-theme').click(function () {
   myFunction(this);
 });
-
-// function myFunction(element) {
-//   console.log(element);
-//   console.log(element.id);
-//   console.log($(element).attr("class"));
-// }
 
 (function ($) {
   $(window).on("scroll", function () {
