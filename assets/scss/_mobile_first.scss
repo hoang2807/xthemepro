@@ -54,16 +54,16 @@
     right: 0;
   }
 
-  @include small-desktop {
+  @media screen and (max-width: 1280px) {
     > .img {
       scale: 0.6;
       right: -188px;
       top: 151px;
     }
   }
-  @include landscape-phone {
+
+  @media screen and (max-width: 844px) {
     > .img {
-      // display: none;
       scale: 0.4;
       right: -287px;
       top: 225px;

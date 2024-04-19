@@ -43,17 +43,26 @@ header {
   justify-content: space-between;
   color: white;
   text-transform: uppercase;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
   .list-header-itemLeft {
     font-size: 13px;
     display: flex;
     gap: 10px;
     align-items: center;
     cursor: pointer;
+    .menu {
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      line-height: 19.5px;
+    }
   }
 
   .list-header-itemRight {
-    font-size: 13px;
+    color: white;
+    @include text-uppercase(13px, 300);
+    line-height: 18px;
+    letter-spacing: 0.2em;
   }
 
   .burger {

@@ -64,6 +64,10 @@
     }
   }
 
+  .modal .modal-body img {
+    width: 100%;
+  }
+
   @media screen and (max-width: 1432px) {
     .arrow-prev {
       left: -46px;
@@ -78,17 +82,27 @@
       width: 96%;
     }
   }
-  @media screen and (max-width: 679px) {
+
+  @media screen and (max-width: 1232px) {
     .screenshot-container-list {
-      padding-left: 10px;
+      padding-left: 15px;
       overflow: hidden;
     }
   }
+
   @media screen and (max-width: 431px) {
     .screenshot-container-list {
       padding: 25px;
       .slick-slide {
-        margin-right: 16px;
+        margin-right: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .screenshot-container-list {
+      .slick-slide {
+        margin-right: 0;
       }
     }
   }

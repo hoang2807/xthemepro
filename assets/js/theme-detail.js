@@ -24,40 +24,11 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           variableWidth: false,
+          centerPadding: '13px',
         }
       }
     ]
   })
-
-  $('.theme-detail-slider').slick({
-    centerMode: true,
-    infinite: true,
-    centerPadding: '120px',
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    arrows: false,
-    // variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
 });
 
 function showImageModal(image) {
