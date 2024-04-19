@@ -2007,7 +2007,7 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .theme-detail .theme-detail-slider .slick-center {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 .theme-detail .theme-detail-slider .carousel-slide {
   height: 100vh;
@@ -2210,6 +2210,10 @@ a {
   max-width: 370px;
   height: 270px;
   cursor: pointer;
+  transition: all 0.35s ease;
+}
+.screenshot-container-list .slick-slide img:hover {
+  transform: scale(1.1);
 }
 .screenshot-container .arrow-prev {
   position: absolute;
@@ -2241,6 +2245,15 @@ a {
 @media screen and (max-width: 679px) {
   .screenshot .screenshot-container-list {
     padding-left: 10px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 431px) {
+  .screenshot .screenshot-container-list {
+    padding: 25px;
+  }
+  .screenshot .screenshot-container-list .slick-slide {
+    margin-right: 16px;
   }
 }
 
