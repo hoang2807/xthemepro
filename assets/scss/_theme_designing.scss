@@ -74,8 +74,14 @@
       display: none;
       flex-direction: column;
       width: 431px;
+      > a:hover {
+        > img {
+          transform: scale(1.01);
+        }
+      }
       > img {
         width: 100%;
+        transition: all ease 0.3s;
       }
       > .device {
         @include text-uppercase(12px, 300);
@@ -86,6 +92,24 @@
         @include text-uppercase(16px, 400);
         padding-top: 5px;
         color: white;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $white;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
       }
       > .price {
         @include text-uppercase(16px, 700);
@@ -170,8 +194,14 @@
   @media screen and (max-width: 922px) {
     .theme-designing-list {
       .item {
-        width: 85%;
+        max-width: 431px;
+        width: 100%;
       }
+    }
+    .theme-designing-list-container {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      padding-left: 0;
     }
   }
 
@@ -254,6 +284,16 @@
 
     .theme-designing-list {
       margin-top: 30px;
+      .item {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .theme-designing-list-container {
+      padding-inline: 15px;
     }
   }
 

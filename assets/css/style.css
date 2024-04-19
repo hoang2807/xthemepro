@@ -1735,8 +1735,12 @@ a {
   flex-direction: column;
   width: 431px;
 }
+.theme-designing-list .item > a:hover > img {
+  transform: scale(1.01);
+}
 .theme-designing-list .item > img {
   width: 100%;
+  transition: all ease 0.3s;
 }
 .theme-designing-list .item > .device {
   font-size: 12px;
@@ -1751,6 +1755,23 @@ a {
   text-transform: uppercase;
   padding-top: 5px;
   color: white;
+  position: relative;
+}
+.theme-designing-list .item > .title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.theme-designing-list .item > .title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .theme-designing-list .item > .price {
   font-size: 16px;
@@ -1819,7 +1840,13 @@ a {
 }
 @media screen and (max-width: 922px) {
   .theme-designing .theme-designing-list .item {
-    width: 85%;
+    max-width: 431px;
+    width: 100%;
+  }
+  .theme-designing .theme-designing-list-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1876,6 +1903,15 @@ a {
   }
   .theme-designing .theme-designing-list {
     margin-top: 30px;
+  }
+  .theme-designing .theme-designing-list .item {
+    width: 100%;
+  }
+  .theme-designing .theme-designing-list .item img {
+    width: 100%;
+  }
+  .theme-designing .theme-designing-list-container {
+    padding-inline: 15px;
   }
 }
 @media screen and (max-width: 447px) {
