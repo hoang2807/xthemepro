@@ -176,7 +176,7 @@
     .about-left {
       .container-about-left {
         .about-text-left {
-          left: -19px;
+          left: -37px;
         }
       }
       .about-design-text {
@@ -195,6 +195,25 @@
         }
         .design {
           scale: 0.6;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    .about-left {
+      .container-about-left {
+        .about-text-left {
+          .app {
+            scale: 0.5;
+          }
+          .design {
+            scale: 0.5;
+            top: 6px;
+            left: 14px;
+          }
         }
       }
     }

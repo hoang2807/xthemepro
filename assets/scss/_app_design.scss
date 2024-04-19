@@ -162,4 +162,16 @@
       }
     }
   }
+
+  @media screen and (max-width: 345px) {
+    .app-design-content {
+      .app {
+        scale: 0.3;
+      }
+      .design {
+        scale: 0.3;
+        left: -137px;
+      }
+    }
+  }
 }

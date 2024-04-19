@@ -223,6 +223,21 @@
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .container-text {
+      .text-image {
+        .web {
+          scale: 0.3;
+          left: -166px;
+        }
+        .design {
+          scale: 0.3;
+          left: -202px;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 357px) {
     .container-image {
       .plan {

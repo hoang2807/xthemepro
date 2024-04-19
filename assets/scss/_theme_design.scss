@@ -41,8 +41,7 @@
       }
 
       .animate-button {
-        // position: relative;
-        // top: -122px;
+        text-align: center;
       }
     }
 
@@ -273,10 +272,36 @@
   }
 }
 
-@media screen and (max-width: 366px) {
-  .theme-design {
+@media screen and (max-width: 368px) {
+  .theme_design {
     .container-theme-slick {
       left: -10px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .theme_design {
+    .container-theme-slick {
+      .theme-list {
+        .list-item {
+          scale: 0.8;
+        }
+      }
+      .prev {
+        left: 39px;
+      }
+      .next {
+        left: 285px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .theme_design {
+    .container-theme-slick {
+      left: -20px;
     }
   }
 }

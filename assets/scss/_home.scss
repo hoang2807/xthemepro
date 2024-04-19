@@ -1,14 +1,25 @@
 header {
   position: fixed;
-  top: 40px;
+  top: 0;
   left: 0;
-  right: 0;
   z-index: 10;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  &.header-show {
+    background-color: $bg-dark;
+    padding-bottom: 8px;
+    transition: all 0.3s ease;
+    .header-container {
+      margin-top: 0;
+    }
+  }
+
   .header-container {
     max-width: 1361px;
     width: 100%;
     height: 92px;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
   }
 
   @include extra-desktop {
@@ -33,6 +44,9 @@ header {
     .header-container {
       img {
         display: none;
+      }
+      .list-header {
+        padding-top: 29px;
       }
     }
   }
@@ -148,13 +162,9 @@ header {
     }
   }
   .line {
-    // width: 122px;
     height: 122px;
     // transform: rotate(90deg);
     border: 1px solid #fff;
-    // position: absolute;
-    // top: 410px;
-    // left: 50%;
   }
 }
 
