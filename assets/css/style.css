@@ -2416,14 +2416,6 @@ a {
   text-align: center;
   margin-top: 123px;
 }
-.footer-container .social-icon {
-  display: flex;
-  gap: 34px;
-  margin-top: 19px;
-}
-.footer-container .social-icon > img {
-  cursor: pointer;
-}
 @media only screen and (max-width: 991.98px) {
   .footer-container {
     padding-inline: 12px;
@@ -2433,6 +2425,27 @@ a {
   .footer .footer-group {
     flex-direction: column;
   }
+}
+
+.social-icon {
+  display: flex;
+  gap: 34px;
+  margin-top: 19px;
+}
+.social-icon svg {
+  transition: 0.5s ease;
+}
+.social-icon svg:hover {
+  transform: rotate(360deg) translateY(-3px) scale(1.5);
+}
+.social-icon svg:hover.facebook path {
+  fill: #1877f2;
+}
+.social-icon svg:hover.youtube path {
+  fill: #ff0000;
+}
+.social-icon svg:hover.tiktok path {
+  fill: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
