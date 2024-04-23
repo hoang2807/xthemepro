@@ -2,59 +2,11 @@ const burger = document.getElementById('open')
 const overlay = document.getElementById('overlay')
 const li = document.querySelectorAll('.overlay-container li')
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger)
-
-  // var tl = gsap.timeline({ paused: true });
-
-  // function openNav() {
-  //   animateOpenNav();
-  //   burger.onclick = function (e) {
-  //     // Toggle reversed to it's opposite value
-  //     tl.reversed(!tl.reversed());
-  //     // Use the toggle method in the classList API
-  //     burger.classList.toggle("active");
-  //     disableScroll()
-
-  //     if (!burger.classList.contains('active')) {
-  //       enableScroll()
-  //     }
-  //   };
-  // }
-
-  // const nav__link = document.querySelectorAll('.nav__link')
-  // nav__link.forEach(element => {
-  //   element.addEventListener('click', function (e) {
-  //     tl.reversed(!tl.reversed());
-  //     enableScroll()
-  //   })
-  // })
-
-  // function animateOpenNav() {
-  //   var mobileNav = document.getElementById("mb_nav");
-  //   tl.to(mobileNav, {
-  //     duration: 0.4,
-  //     ease: "power3.out",
-  //     y: 0
-  //   }).to(".nav__link", {
-  //     opacity: 1,
-  //     y: 0,
-  //     duration: 0.3,
-  //     stagger: {
-  //       // wrap advanced options in an object
-  //       each: 0.2,
-  //       ease: "power1.in"
-  //     }
-  //   })
-  //     .reverse(); // Finally reverse the timeline. reversed() is true
-  // }
-
-  // // init
-  // openNav();
-
-});
+// document.addEventListener("DOMContentLoaded", function () {
+// });
 
 $(document).ready(function () {
+  gsap.registerPlugin(ScrollTrigger)
   $(".theme-list").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -82,7 +34,6 @@ $(document).ready(function () {
           arrows: false,
           slidesToShow: 2,
           slidesToScroll: 1,
-          // variableWidth: false,
         }
       }
     ],
@@ -215,16 +166,3 @@ $('.btn-theme').click(function () {
     });
   });
 })(jQuery);
-
-
-
-// disableScroll()
-
-// $(document).ready(function () {
-//   setTimeout(function () {
-//     $('body').addClass('loaded');
-//     $('h1').css('color', '#222222');
-//     enableScroll()
-//   }, 3000);
-// });
-

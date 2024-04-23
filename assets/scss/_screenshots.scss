@@ -36,12 +36,15 @@
         margin-right: 25px;
         > div {
           margin-bottom: 25px;
+          overflow: hidden;
+          border-radius: 10px;
         }
         img {
           max-width: 370px;
           height: 270px;
           cursor: pointer;
           transition: all 0.35s ease;
+          border-radius: 10px;
           &:hover {
             transform: scale(1.1);
           }

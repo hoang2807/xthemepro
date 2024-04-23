@@ -79,14 +79,19 @@
       display: none;
       flex-direction: column;
       width: 431px;
-      > a:hover {
+      > a {
+        overflow: hidden;
+        border-radius: 10px;
         > img {
-          transform: scale(1.01);
+          width: 100%;
+          transition: all 0.3s;
+          border-radius: 10px;
         }
       }
-      > img {
-        width: 100%;
-        transition: all ease 0.3s;
+      > a:hover {
+        > img {
+          transform: scale(1.1);
+        }
       }
       > .device {
         @include text-uppercase(12px, 300);
