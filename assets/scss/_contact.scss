@@ -66,11 +66,14 @@
         -o-transition: all 0.4s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
+        p {
+          color: $white;
+        }
       }
     }
     .copy-right {
       @include font-p;
-      margin-top: 211px;
+      margin-top: 57px;
     }
     .social-icon {
       display: flex;
@@ -83,9 +86,15 @@
   }
 }
 
+@media screen and (max-width: 510px) {
+  .contact-container {
+    top: 185px;
+  }
+}
+
 @include mobile {
   .contact-container {
-    top: 130px;
+    top: 48px;
     .copy-right {
       margin-top: 60px;
       padding-inline: 5px !important;
@@ -94,7 +103,7 @@
       width: 95%;
     }
     .contact-container-group {
-      margin-top: 45px;
+      margin-top: 22px;
       .item {
         padding: 14px 24px 12px 24px;
       }
@@ -104,9 +113,12 @@
 
 @media screen and (max-width: 375px) {
   .contact-container {
-    top: 69px;
+    top: 41px;
     &-group {
       gap: 23px;
+    }
+    .copy-right {
+      margin-top: 27px;
     }
   }
 }

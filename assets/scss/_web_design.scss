@@ -236,13 +236,9 @@
         }
       }
     }
-  }
-
-  @media screen and (max-width: 357px) {
     .container-image {
       .plan {
-        bottom: -44px;
-        left: -39px;
+        display: none;
       }
       .book {
         display: none;

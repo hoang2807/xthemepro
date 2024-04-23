@@ -1049,11 +1049,8 @@ a {
     scale: 0.3;
     left: -202px;
   }
-}
-@media screen and (max-width: 357px) {
   .web-design .container-image .plan {
-    bottom: -44px;
-    left: -39px;
+    display: none;
   }
   .web-design .container-image .book {
     display: none;
@@ -1692,12 +1689,15 @@ a {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+.contact-container-group .item:hover p {
+  color: #fff;
+}
 .contact-container .copy-right {
   font-size: 18px;
   font-weight: 275;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: 211px;
+  margin-top: 57px;
 }
 .contact-container .social-icon {
   display: flex;
@@ -1708,9 +1708,14 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 510px) {
+  .contact-container {
+    top: 185px;
+  }
+}
 @media only screen and (max-width: 480.98px) {
   .contact-container {
-    top: 130px;
+    top: 48px;
   }
   .contact-container .copy-right {
     margin-top: 60px;
@@ -1720,7 +1725,7 @@ a {
     width: 95%;
   }
   .contact-container .contact-container-group {
-    margin-top: 45px;
+    margin-top: 22px;
   }
   .contact-container .contact-container-group .item {
     padding: 14px 24px 12px 24px;
@@ -1728,10 +1733,13 @@ a {
 }
 @media screen and (max-width: 375px) {
   .contact-container {
-    top: 69px;
+    top: 41px;
   }
   .contact-container-group {
     gap: 23px;
+  }
+  .contact-container .copy-right {
+    margin-top: 27px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -2513,6 +2521,7 @@ a {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  color: #fff;
 }
 .footer-container .footer-group .item:hover {
   background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
