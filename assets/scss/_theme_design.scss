@@ -73,9 +73,19 @@
         flex-direction: column !important;
         width: 369px;
         height: 369px;
+        a {
+          overflow: hidden;
+          border-radius: 10px;
+        }
         .image {
           width: 369px;
+          object-fit: cover;
           height: 250px;
+          transition: all 0.3s;
+          border-radius: 10px;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
         .theme-device {
           @include text-uppercase(12px, 300);
@@ -85,6 +95,7 @@
         .theme-title {
           font-weight: 400;
           margin-top: 5px;
+          color: $white;
         }
         .price {
           margin-top: 15px;
@@ -97,9 +108,6 @@
         width: 600px;
         height: 300px;
       }
-      // .slick-initialized .slick-slide {
-      //   margin: 0 10px;
-      // }
 
       .slick-slide {
         width: 369px;
@@ -108,7 +116,9 @@
         margin-right: 23px;
       }
     }
-
+    img {
+      cursor: pointer;
+    }
     .prev {
       position: absolute;
       top: 25%;

@@ -39,15 +39,17 @@
           overflow: hidden;
           border-radius: 10px;
         }
-        img {
-          max-width: 370px;
-          height: 270px;
-          cursor: pointer;
-          transition: all 0.35s ease;
-          border-radius: 10px;
-          &:hover {
-            transform: scale(1.1);
-          }
+      }
+
+      img {
+        max-width: 370px;
+        height: 270px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: all 0.35s ease;
+        border-radius: 10px;
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }
@@ -67,8 +69,13 @@
     }
   }
 
-  .modal .modal-body img {
-    width: 100%;
+  .modal {
+    &-dialog {
+      max-width: max-content;
+      .modal-body img {
+        width: 100%;
+      }
+    }
   }
 
   @media screen and (max-width: 1432px) {

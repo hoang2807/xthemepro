@@ -3,8 +3,6 @@ const overlay = document.getElementById('overlay')
 const li = document.querySelectorAll('.overlay-container li')
 
 document.addEventListener("DOMContentLoaded", function () {
-  // gsap.registerPlugin(ScrollTrigger)
-
   var tl = gsap.timeline({ paused: true });
 
   function openNav() {
@@ -22,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  const nav__link = document.querySelectorAll('.nav__link')
+  var nav__link = document.querySelectorAll('.nav__link')
   nav__link.forEach(element => {
     element.addEventListener('click', function (e) {
       tl.reversed(!tl.reversed());
@@ -31,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   function animateOpenNav() {
-    var mobileNav = document.getElementById("mb_nav");
+    const mobileNav = document.getElementById("mb_nav");
     tl.to(mobileNav, {
       duration: 0.4,
       ease: "power3.out",
@@ -51,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // init
   openNav();
-
 });
 
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -69,11 +66,6 @@ function preventDefaultForScrollKeys(e) {
 
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; }
-  }));
-} catch (e) { }
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';

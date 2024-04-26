@@ -84,6 +84,9 @@
         border-radius: 10px;
         > img {
           width: 100%;
+          object-fit: cover;
+          max-width: 431px;
+          height: 292px;
           transition: all 0.3s;
           border-radius: 10px;
         }
@@ -101,25 +104,6 @@
       > .title {
         @include text-uppercase(16px, 400);
         padding-top: 5px;
-        color: white;
-        position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          transform: scaleX(0);
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: $white;
-          transform-origin: bottom right;
-          transition: transform 0.25s ease-out;
-        }
-
-        &:hover:after {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
       }
       > .price {
         @include text-uppercase(16px, 700);

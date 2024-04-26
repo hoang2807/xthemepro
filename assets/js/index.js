@@ -1,10 +1,3 @@
-const burger = document.getElementById('open')
-const overlay = document.getElementById('overlay')
-const li = document.querySelectorAll('.overlay-container li')
-
-// document.addEventListener("DOMContentLoaded", function () {
-// });
-
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger)
   $(".theme-list").slick({
